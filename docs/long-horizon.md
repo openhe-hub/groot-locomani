@@ -32,7 +32,7 @@ Astra 的编排落实为可检查的代码和数据：任务顺序写入状态�
 
 ## 在线执行：同一个 20 毫秒控制步
 
-**取篮。** GR00T 的视觉语言骨干把图像和指令编码为特征，动作头结合机器人状态生成动作块。客户端每次取 40 步，覆盖 0.8 秒；在这个回合共查询 18 次。每步取出一个 `sonic_token[64]` 送入 SONIC 解码器，两个手部标量分别映射到手指关节目标。此次配置使用上一次开合命令的二值状态作为 GR00T 手部观测。双手发出闭合命令且检测到手指接触后，启用有力限幅的弹簧阻尼抓持辅助，并向手腕施加反力。[GR00T 动作接口](../third_party/Zero-HLM-Bench/runtime/scripts/imitation_learning/robomimic/wbc_play_groot_sonic.py) · [抓持与放置控制](../examples/g1_loco_manipulation/long_horizon/missions/carry_assist.py)
+**取篮。** GR00T 的视觉语言骨干把图像和指令编码为特征，动作头结合机器人状态生成动作块。客户端每次取 40 步，覆盖 0.8 秒；在这个回合共查询 18 次。每步取出一个 `sonic_token[64]` 送入 SONIC 解码器，两个手部标量分别映射到手指关节目标。此次配置使用上一次开合命令的二值状态作为 GR00T 手部观测。双手发出闭合命令且检测到手指接触后，启用有力限幅的弹簧阻尼抓持辅助，并向手腕施加反力。[GR00T 动作接口](https://github.com/BIGAI-General-Vision-Lab/Zero-HLM-Bench/blob/b481409f2cd62690ca50ea408d2f56924cb17a1f/runtime/scripts/imitation_learning/robomimic/wbc_play_groot_sonic.py) · [抓持与放置控制](../examples/g1_loco_manipulation/long_horizon/missions/carry_assist.py)
 
 在线端消费的单环境动作块如下。第一维是环境数，第二维是未来时间步。手部开合值由执行适配器按左右手各自的映射转换为手指关节角。
 
@@ -42,7 +42,7 @@ Astra 的编排落实为可检查的代码和数据：任务顺序写入状态�
 | `left_hand_gripper` | `[1, 40, 1]` | 左手关节目标 |
 | `right_hand_gripper` | `[1, 40, 1]` | 右手开合二值化后映射为关节目标 |
 
-**从视觉策略交给步态跟踪。** 第 715 步（14.30 秒），餐篮已被持住，相对起点抬高超过 0.10 米、水平移动超过 0.32 米。状态机启用 `loaded` 参考。此后每个控制步，SONIC 编码器从参考序列读取一段未来的关节位置、速度和相对朝向，生成 64 维 token。共享解码器结合基座角速度、关节位置与速度、重力方向和近期动作，输出 **29 个身体关节目标角**。执行器驱动 G1，下一步再读取新的物理状态。视频里的圆点是输入约束，绿线是从实际骨盆位置累积的路线。[控制权切换](../examples/g1_loco_manipulation/long_horizon/missions/workflow.py) · [SONIC 编解码](../third_party/Zero-HLM-Bench/runtime/scripts/sonic_kimodo_run/sonic_policy.py)
+**从视觉策略交给步态跟踪。** 第 715 步（14.30 秒），餐篮已被持住，相对起点抬高超过 0.10 米、水平移动超过 0.32 米。状态机启用 `loaded` 参考。此后每个控制步，SONIC 编码器从参考序列读取一段未来的关节位置、速度和相对朝向，生成 64 维 token。共享解码器结合基座角速度、关节位置与速度、重力方向和近期动作，输出 **29 个身体关节目标角**。执行器驱动 G1，下一步再读取新的物理状态。视频里的圆点是输入约束，绿线是从实际骨盆位置累积的路线。[控制权切换](../examples/g1_loco_manipulation/long_horizon/missions/workflow.py) · [SONIC 编解码](https://github.com/BIGAI-General-Vision-Lab/Zero-HLM-Bench/blob/b481409f2cd62690ca50ea408d2f56924cb17a1f/runtime/scripts/sonic_kimodo_run/sonic_policy.py)
 
 **放篮、擦板与关灯。** 临近餐边台时，控制器按篮子与接收面的相对位姿对齐双腕并放手。工位控制器读取仿真中的机构和指尖位置，IK 将目标点转换为手臂关节命令，与 SONIC 的身体目标一起提交给仿真。面包盒滑盖按实测手位驱动关节；擦拭按抹布覆盖的位置逐格计数；关灯由指尖到达开关区域触发。状态机读取实际行程、覆盖区域、台面支撑和物体速度等信号，决定是否推进工序。[工位控制](../examples/g1_loco_manipulation/long_horizon/missions/station_control.py) · [台面支撑判据](../examples/g1_loco_manipulation/long_horizon/missions/stations.py)
 

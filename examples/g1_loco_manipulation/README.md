@@ -32,7 +32,7 @@
 | [Isaac-GR00T](../../README.md) | NVIDIA 官方主仓库。本机整理时的提交为 `708617f5716c`。 |
 | [third_party/IsaacLab-Arena](../../third_party/IsaacLab-Arena/) | 保留 N1.6 策略适配器版本 `8b4a3a47fc53`（release/0.2.1）。远端仿真本体另外使用 `f479817431f6`（release/0.1.1）。N1.6 策略服务使用官方 GR00T 提交 `e29d8fc50b0e`。 |
 | [box](box/) | 从 L40S 主机上成功运行的工作根目录取回策略桥接和仿真录像脚本。 |
-| [third_party/Zero-HLM-Bench](../../third_party/Zero-HLM-Bench/) | 香蕉任务使用提交 `b481409f2cd6`，其中 [N1.7 策略实现](../../third_party/Zero-HLM-Bench/integrations/groot/) 和仿真评测器来自同一版本。 |
+| [third_party/Zero-HLM-Bench](../../third_party/Zero-HLM-Bench/) | 香蕉任务使用提交 `b481409f2cd6`，其中 [N1.7 策略实现](https://github.com/BIGAI-General-Vision-Lab/Zero-HLM-Bench/tree/b481409f2cd62690ca50ea408d2f56924cb17a1f/integrations/groot) 和仿真评测器来自同一版本。 |
 
 两个子项目由 Git 子模块固定版本。本地工作树使用 sparse checkout，仅展开开发所需的源码、配置与文档。
 
