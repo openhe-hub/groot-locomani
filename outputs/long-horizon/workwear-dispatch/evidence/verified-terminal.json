@@ -1,0 +1,72 @@
+{
+  "mission": "factory",
+  "control_steps": 3107,
+  "control_hz": 50,
+  "live_queries": 13,
+  "success": true,
+  "terminal_reason": "verified_dock_receiver_read",
+  "final_checks": {
+    "item_settled": true,
+    "secure": true,
+    "panel": true,
+    "receipt": true,
+    "cart_at_dock": true
+  },
+  "delivery": {
+    "ok": true,
+    "checks": {
+      "settled_window": true,
+      "on_receiving_deck": true,
+      "supported_by_cart": true,
+      "linear_settled": true,
+      "angular_settled": true
+    },
+    "min_support_n": 0.09082476794719696,
+    "cap_local": [
+      -0.32488581432224783,
+      -0.08147710620200625,
+      0.8842990606327245
+    ],
+    "max_object_lift": 0.5181934833526611,
+    "original_cabinet_evaluator": {
+      "ok": false,
+      "checks": {
+        "inside_left_top_empty_region_xy": false,
+        "above_minimum_z": true,
+        "linear_speed_settled": true,
+        "angular_speed_settled": true,
+        "stable_window_complete": true
+      },
+      "reasons": [
+        "inside_left_top_empty_region_xy"
+      ],
+      "evaluated_frame": 892,
+      "stable_frames": 10,
+      "hat_local_xy_m": [
+        -0.32488581432224783,
+        -0.08147710620200628
+      ],
+      "hat_world_z_m": 0.9092990159988403,
+      "max_object_lift": 0.5181934833526611,
+      "hat_final_linear_speed_mps": 0.008302434068764422,
+      "hat_final_angular_speed_radps": 0.008150452610104839
+    }
+  },
+  "path_m": 6.5142822265625,
+  "min_root_z": 0.7308240532875061,
+  "covered": 3,
+  "secured": true,
+  "worktop_complete": true,
+  "receipt": true,
+  "cart_displacement_m": 0.687313437461853,
+  "cart_load_travel_m": 0.6558101177215576,
+  "terminal_report": "Recovered from the logged live gate read and 40 consecutive sensor samples after terminal JSON serialization failed.",
+  "gate_read": {
+    "tag_id": "DISPATCH-PPE-17",
+    "stable_frames": 40,
+    "max_reader_distance_m": 0.08500005912927584,
+    "max_cart_position_error_m": 1.7534709943132607e-07,
+    "min_support_n": 0.09764651954174042,
+    "max_robot_to_cart_m": 0.8908466696739197
+  }
+}

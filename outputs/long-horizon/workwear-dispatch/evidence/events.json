@@ -1,0 +1,225 @@
+[
+  {
+    "name": "start",
+    "step": 0,
+    "secure_anchor": [
+      0.04500000178813934,
+      1.3899999856948853,
+      0.949999988079071
+    ],
+    "robot": [
+      -0.40748330950737,
+      -0.30038028955459595,
+      0.7812290191650391,
+      0.7071067690849304,
+      -1.4595963326868855e-12,
+      -1.2317898437363972e-11,
+      0.7071067690849304
+    ]
+  },
+  {
+    "name": "compliant_grasp",
+    "step": 226,
+    "object_xyz": [
+      -0.5489233136177063,
+      0.20435874164104462,
+      0.616443395614624
+    ],
+    "measured_contact_n": 0.029578547924757004
+  },
+  {
+    "name": "loaded_route",
+    "step": 509,
+    "reference": "factory-route.npz",
+    "join_frame": 203,
+    "object_xyz": [
+      -0.25181055068969727,
+      0.4926583468914032,
+      0.8251128196716309
+    ]
+  },
+  {
+    "name": "align_load",
+    "step": 800,
+    "target_xyz": [
+      0.6027396975485053,
+      1.4689073936916879,
+      0.9120001448432082
+    ],
+    "object_xyz": [
+      0.5244637727737427,
+      1.5148242712020874,
+      1.128753423690796
+    ],
+    "gap_m": 0.04354522255532506
+  },
+  {
+    "name": "released_over_receiver",
+    "step": 853,
+    "object_xyz": [
+      0.5733288526535034,
+      1.4642969369888306,
+      1.0144658088684082
+    ],
+    "gap_m": 0.0,
+    "height_above_deck_m": 0.20246580886840815
+  },
+  {
+    "name": "delivered",
+    "step": 892,
+    "queries": 13,
+    "checks": {
+      "ok": true,
+      "checks": {
+        "settled_window": true,
+        "on_receiving_deck": true,
+        "supported_by_cart": true,
+        "linear_settled": true,
+        "angular_settled": true
+      },
+      "min_support_n": 0.09082476794719696,
+      "cap_local": [
+        -0.32488581432224783,
+        -0.08147710620200625,
+        0.8842990606327245
+      ],
+      "max_object_lift": 0.5181934833526611,
+      "original_cabinet_evaluator": {
+        "ok": false,
+        "checks": {
+          "inside_left_top_empty_region_xy": false,
+          "above_minimum_z": true,
+          "linear_speed_settled": true,
+          "angular_speed_settled": true,
+          "stable_window_complete": true
+        },
+        "reasons": [
+          "inside_left_top_empty_region_xy"
+        ],
+        "evaluated_frame": 892,
+        "stable_frames": 10,
+        "hat_local_xy_m": [
+          -0.32488581432224783,
+          -0.08147710620200628
+        ],
+        "hat_world_z_m": 0.9092990159988403,
+        "max_object_lift": 0.5181934833526611,
+        "hat_final_linear_speed_mps": 0.008302434068764422,
+        "hat_final_angular_speed_radps": 0.008150452610104839
+      }
+    }
+  },
+  {
+    "name": "secure",
+    "step": 892,
+    "base": [
+      0.2767002284526825,
+      0.9987021684646606,
+      0.78582763671875
+    ]
+  },
+  {
+    "name": "handle_engaged",
+    "step": 1046,
+    "distance_m": 0.050831244930327826
+  },
+  {
+    "name": "guard_locked",
+    "step": 1170,
+    "measured": 1.0171862840652466
+  },
+  {
+    "name": "return",
+    "step": 1255,
+    "base": [
+      0.28844723105430603,
+      0.9967007637023926,
+      0.7855305075645447
+    ]
+  },
+  {
+    "name": "arrived",
+    "step": 1938,
+    "leg": "return",
+    "xy": [
+      -0.19517913460731506,
+      0.055465493351221085
+    ]
+  },
+  {
+    "name": "worktop",
+    "step": 1938,
+    "base": [
+      -0.19517913460731506,
+      0.055465493351221085,
+      0.7810525894165039
+    ]
+  },
+  {
+    "name": "tag_read",
+    "step": 2084,
+    "index": 0,
+    "tag_id": "PPE-17",
+    "distance_m": 0.012924874961066816
+  },
+  {
+    "name": "tag_read",
+    "step": 2154,
+    "index": 1,
+    "tag_id": "QA-B4",
+    "distance_m": 0.018566239924126784
+  },
+  {
+    "name": "tag_read",
+    "step": 2221,
+    "index": 2,
+    "tag_id": "DOCK-02",
+    "distance_m": 0.0046182095921529845
+  },
+  {
+    "name": "dispatch_start_pressed",
+    "step": 2302,
+    "distance_m": 0.021653658756976304
+  },
+  {
+    "name": "dispatch_authorized",
+    "step": 2384,
+    "positions": 3
+  },
+  {
+    "name": "escort",
+    "step": 2384,
+    "base": [
+      -0.24124643206596375,
+      0.047214213758707047,
+      0.7692167162895203
+    ]
+  },
+  {
+    "name": "arrived",
+    "step": 3067,
+    "leg": "escort",
+    "xy": [
+      0.19395236670970917,
+      0.9804733395576477
+    ]
+  },
+  {
+    "name": "receipt",
+    "step": 3067,
+    "base": [
+      0.19395236670970917,
+      0.9804733395576477,
+      0.7843426465988159
+    ]
+  },
+  {
+    "name": "dock_receiver_read",
+    "step": 3107,
+    "tag_id": "DISPATCH-PPE-17",
+    "antenna_distance_m": 0.08500003697118788,
+    "robot_distance_m": 0.8908466696739197,
+    "support_n": 0.09764651954174042,
+    "stable_frames": 40
+  }
+]

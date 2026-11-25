@@ -1,0 +1,232 @@
+{
+  "dock_target_xy_m": [
+    1.94,
+    0.72
+  ],
+  "pairs": [
+    {
+      "seed": 42,
+      "arm": "text",
+      "success": true,
+      "upright": true,
+      "strokes": 2,
+      "dock_xy_m": [
+        1.950439337154948,
+        0.7073868428613189
+      ],
+      "dock_error_m": 0.01637288897048226,
+      "generated_waypoint_mae_m": 0.06324591022013278,
+      "max_tilt_deg": 8.538347652864022
+    },
+    {
+      "seed": 42,
+      "arm": "pelvis",
+      "success": false,
+      "upright": true,
+      "strokes": 1,
+      "dock_xy_m": [
+        1.9401399975821734,
+        0.6955277613572954
+      ],
+      "dock_error_m": 0.024472639079357494,
+      "generated_waypoint_mae_m": 0.06156952069250299,
+      "max_tilt_deg": 15.52553063089554
+    },
+    {
+      "seed": 43,
+      "arm": "text",
+      "success": false,
+      "upright": false,
+      "strokes": 1,
+      "dock_xy_m": [
+        1.8265345550814929,
+        0.7083084506374618
+      ],
+      "dock_error_m": 0.11406620672684539,
+      "generated_waypoint_mae_m": 0.12997242930915806,
+      "max_tilt_deg": 83.90826236998957
+    },
+    {
+      "seed": 43,
+      "arm": "pelvis",
+      "success": false,
+      "upright": true,
+      "strokes": 1,
+      "dock_xy_m": [
+        1.8327122161282332,
+        0.6215621277416068
+      ],
+      "dock_error_m": 0.14560454410105017,
+      "generated_waypoint_mae_m": 0.08425471065971606,
+      "max_tilt_deg": 15.760774664646554
+    },
+    {
+      "seed": 44,
+      "arm": "text",
+      "success": false,
+      "upright": false,
+      "strokes": 1,
+      "dock_xy_m": [
+        1.9494347688996412,
+        0.5058702941413846
+      ],
+      "dock_error_m": 0.21433745775129173,
+      "generated_waypoint_mae_m": 0.2324132561730653,
+      "max_tilt_deg": 83.60627652973318
+    },
+    {
+      "seed": 44,
+      "arm": "pelvis",
+      "success": false,
+      "upright": false,
+      "strokes": 1,
+      "dock_xy_m": [
+        1.962960405687223,
+        0.6205895941052689
+      ],
+      "dock_error_m": 0.10202749153770782,
+      "generated_waypoint_mae_m": 0.09644349432759668,
+      "max_tilt_deg": 117.29075418686156
+    },
+    {
+      "seed": 45,
+      "arm": "text",
+      "success": false,
+      "upright": false,
+      "strokes": 1,
+      "dock_xy_m": [
+        1.9359141570076683,
+        0.6616581371621577
+      ],
+      "dock_error_m": 0.05848475931683044,
+      "generated_waypoint_mae_m": 0.2019112842892514,
+      "max_tilt_deg": 122.151918739622
+    },
+    {
+      "seed": 45,
+      "arm": "pelvis",
+      "success": true,
+      "upright": true,
+      "strokes": 2,
+      "dock_xy_m": [
+        1.9746466498921722,
+        0.6568192720126828
+      ],
+      "dock_error_m": 0.07205688542920884,
+      "generated_waypoint_mae_m": 0.11460567003694577,
+      "max_tilt_deg": 20.941718026998807
+    },
+    {
+      "seed": 46,
+      "arm": "text",
+      "success": false,
+      "upright": false,
+      "strokes": 1,
+      "dock_xy_m": [
+        1.6678288109102726,
+        0.6435391041674537
+      ],
+      "dock_error_m": 0.2827073128909679,
+      "generated_waypoint_mae_m": 0.5861139190536622,
+      "max_tilt_deg": 78.21835551311565
+    },
+    {
+      "seed": 46,
+      "arm": "pelvis",
+      "success": false,
+      "upright": false,
+      "strokes": 1,
+      "dock_xy_m": [
+        1.8230618744659433,
+        0.6959185762112567
+      ],
+      "dock_error_m": 0.11939196026161833,
+      "generated_waypoint_mae_m": 0.0807251486406238,
+      "max_tilt_deg": 91.08014692594881
+    },
+    {
+      "seed": 47,
+      "arm": "text",
+      "success": false,
+      "upright": false,
+      "strokes": 2,
+      "dock_xy_m": [
+        1.9579873855225076,
+        0.7039024200776299
+      ],
+      "dock_error_m": 0.024138726505190982,
+      "generated_waypoint_mae_m": 0.17580501492441775,
+      "max_tilt_deg": 107.2279107897845
+    },
+    {
+      "seed": 47,
+      "arm": "pelvis",
+      "success": false,
+      "upright": false,
+      "strokes": 1,
+      "dock_xy_m": [
+        1.9855246728889633,
+        0.5191457381728803
+      ],
+      "dock_error_m": 0.2059488536888813,
+      "generated_waypoint_mae_m": 0.08707436792861005,
+      "max_tilt_deg": 82.11071114232986
+    },
+    {
+      "seed": 48,
+      "arm": "text",
+      "success": false,
+      "upright": true,
+      "strokes": 0,
+      "dock_xy_m": [
+        1.7916120174886427,
+        0.8318761318529992
+      ],
+      "dock_error_m": 0.18583665470563263,
+      "generated_waypoint_mae_m": 0.1533085379634417,
+      "max_tilt_deg": 13.779420858266853
+    },
+    {
+      "seed": 48,
+      "arm": "pelvis",
+      "success": false,
+      "upright": false,
+      "strokes": 1,
+      "dock_xy_m": [
+        1.9435820235814756,
+        0.6209728140327524
+      ],
+      "dock_error_m": 0.09909194948899776,
+      "generated_waypoint_mae_m": 0.0743707460873737,
+      "max_tilt_deg": 119.8991365767677
+    },
+    {
+      "seed": 49,
+      "arm": "text",
+      "success": false,
+      "upright": false,
+      "strokes": 1,
+      "dock_xy_m": [
+        1.9690357502748128,
+        0.6766456937570453
+      ],
+      "dock_error_m": 0.052179216780526644,
+      "generated_waypoint_mae_m": 0.051839783763688786,
+      "max_tilt_deg": 83.92148626570247
+    },
+    {
+      "seed": 49,
+      "arm": "pelvis",
+      "success": false,
+      "upright": false,
+      "strokes": 1,
+      "dock_xy_m": [
+        1.9359261614654215,
+        0.7122999995564717
+      ],
+      "dock_error_m": 0.008711266683792402,
+      "generated_waypoint_mae_m": 0.058471808687700244,
+      "max_tilt_deg": 97.55876883104683
+    }
+  ]
+}

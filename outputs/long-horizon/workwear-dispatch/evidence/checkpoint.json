@@ -1,0 +1,59 @@
+{
+  "created_at": "2026-11-23T05:06:46.379844+00:00",
+  "checkpoint": "/work/zero/checkpoints/task2",
+  "checkpoint_files": [
+    {
+      "path": "config.json",
+      "bytes": 2147,
+      "sha256": "7c5119fcbe4dc67909a65ad280e469802ed6355bc250d2f6cccc48c0d9f18007"
+    },
+    {
+      "path": "embodiment_id.json",
+      "bytes": 2226,
+      "sha256": "e0ee9ef7abc2c324318363d2d809631df5524245698021a6477e48f0b2e52f7f"
+    },
+    {
+      "path": "model-00001-of-00002.safetensors",
+      "bytes": 4990519232,
+      "sha256": "0070167f7cf6899aea520da91c698ccc49c9a8ad812308c1bef6a76da7a2eeaa"
+    },
+    {
+      "path": "model-00002-of-00002.safetensors",
+      "bytes": 1919980184,
+      "sha256": "3f602d50e8818fa501dafec1509129bffca34bc6db3498d17d31f830ca4ac5bb"
+    },
+    {
+      "path": "model.safetensors.index.json",
+      "bytes": 104985,
+      "sha256": "407804ea5a62f4f8823f48811ae0edbb82fac101e9cf4d7273e6e2f692bb4d59"
+    },
+    {
+      "path": "processor_config.json",
+      "bytes": 27289,
+      "sha256": "9a229ea60e481e1243765a6396ff2a1a0cd083367a3990f128b111331c0830ea"
+    },
+    {
+      "path": "statistics.json",
+      "bytes": 4310202,
+      "sha256": "055b82a5a4a69f8ee42ec5c25da1e2e4d767cfd1a5d7f6ecfb01f0c3f3268ae4"
+    }
+  ],
+  "groot_root": "/work/zero/integrations/groot",
+  "command": [
+    "/work/zero/../policy/bin/python",
+    "-u",
+    "-m",
+    "gr00t.eval.run_gr00t_server",
+    "--model-path",
+    "/work/zero/checkpoints/task2",
+    "--embodiment-tag",
+    "unitree_g1_sonic",
+    "--device",
+    "cuda:0",
+    "--host",
+    "127.0.0.1",
+    "--port",
+    "16822",
+    "--strict"
+  ]
+}

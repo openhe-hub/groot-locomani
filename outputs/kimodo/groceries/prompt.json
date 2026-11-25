@@ -1,0 +1,22 @@
+{
+  "model": "Kimodo-G1-RP-v1",
+  "seed": 42,
+  "fps": 30,
+  "approach_seconds": 2.65,
+  "prompt_phases": [
+    [
+      "Walk to the cereal carton at the kitchen island.",
+      2.65
+    ],
+    [
+      "Push the cereal carton onto the green receiving mat.",
+      3.55
+    ],
+    [
+      "Withdraw the hand and stand clear.",
+      2.3
+    ]
+  ],
+  "readout": "Carton advance",
+  "control": "Kimodo walk/stand, SONIC body tracking, state-guided right-arm IK"
+}

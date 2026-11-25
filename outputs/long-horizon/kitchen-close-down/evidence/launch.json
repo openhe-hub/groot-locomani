@@ -1,0 +1,287 @@
+{
+  "task": "task3",
+  "config_sha256": "fa58e5ad893aead41442bb5cadcc465ffba337fb335e20c4acf944333b59d3cf",
+  "manifest_sha256": "871482b6e3b0dcc26751d378f56218b8d82efe04292f76acabcb8b002573c6d0",
+  "rows": [
+    9,
+    10
+  ],
+  "protocol": "/work/zero/configs/protocol/shared",
+  "processor_sha256": "842f45d252cd472b0126bd7b3ffa5441609e012e11d0d0bcaa9541a7c6a47bcb",
+  "endpoint": "tcp://127.0.0.1:16893",
+  "command": [
+    "/work/sim/bin/python",
+    "-u",
+    "/work/zero/runtime/scripts/imitation_learning/robomimic/evaluate_task3.py",
+    "--headless",
+    "--device",
+    "cuda:0",
+    "--model_name",
+    "sim",
+    "--embodiment",
+    "unitree_g1_sonic",
+    "--seed",
+    "0",
+    "--num_envs",
+    "1",
+    "--fallback_env_counts",
+    "1",
+    "--no-resume",
+    "--max_control_steps",
+    "5500",
+    "--chunk_horizon",
+    "40",
+    "--gripper_state_source",
+    "command_binary",
+    "--gr00t_timeout_ms",
+    "120000",
+    "--models_dir",
+    "/work/zero/assets/shared/sonic",
+    "--gs_scene_path",
+    "/work/zero/assets/task3/assets/GS_Assets/B1_art/obj_0_gs_task3_world.ply",
+    "--gs_backend",
+    "2dgs",
+    "--gs_foreground_mode",
+    "isaac_mesh",
+    "--headcam_extrinsic_mode",
+    "task_cfg",
+    "--headcam_calib",
+    "/work/zero/assets/task3/assets/calibration/111_final_ex_0511.json",
+    "--camera_warmup_renders",
+    "10",
+    "--two_d_gs_real2sim_root",
+    "/work/zero/runtime/submodule/2D_GS/Real2Sim",
+    "--init_joint_state_json",
+    "/work/zero/assets/task3/assets/evaluation/task3_initial_body_pose_episode_000000.json",
+    "--init_joint_state_mode",
+    "episode_first_frame",
+    "--vector_env_spacing",
+    "20",
+    "--log_every",
+    "100",
+    "--no-gs_apply_training_color_match",
+    "--sonic_cpu_onnx",
+    "--no-reset_to_sonic_default",
+    "--diagnostic_video_interval",
+    "1",
+    "--checkpoint_dir",
+    "/work/zero/configs/protocol/shared",
+    "--output_root",
+    "/work/experiments/pelvis-input/kitchen-08",
+    "--gr00t_host",
+    "127.0.0.1",
+    "--gr00t_port",
+    "16893",
+    "--manifest",
+    "/work/zero/configs/manifests/task3_hdf5_success386_perturbed100_seed20260831.jsonl",
+    "--manifest_count",
+    "100",
+    "--manifest_row_start",
+    "9",
+    "--manifest_row_stop",
+    "10",
+    "--kit_args=--/persistent/isaac/asset_root/cloud=/work/experiments/pelvis-input/kitchen-08/isaac-assets"
+  ],
+  "config": {
+    "schema_version": 1,
+    "task": "task3",
+    "name": "Carry a basket and close the door",
+    "evaluator": "scripts/imitation_learning/robomimic/evaluate_task3.py",
+    "protocol": "configs/protocol/shared",
+    "env": {
+      "TASK3_SCENE_USD_PATH": "/work/zero/assets/task3/scene.usdc",
+      "TASK3_EVAL_ASSETS_ROOT": "/work/zero/assets/task3/usd",
+      "TASK3_EVAL_BUNDLE_ROOT": "/work/zero/assets/task3",
+      "TASK3_APPLY_CARRYBOX_COLOR_MATCH": "0"
+    },
+    "args": {
+      "--headless": true,
+      "--device": "cuda:0",
+      "--model_name": "sim",
+      "--embodiment": "unitree_g1_sonic",
+      "--seed": 0,
+      "--num_envs": 1,
+      "--fallback_env_counts": [
+        1
+      ],
+      "--no-resume": true,
+      "--max_control_steps": 2000,
+      "--chunk_horizon": 40,
+      "--gripper_state_source": "command_binary",
+      "--gr00t_timeout_ms": 120000,
+      "--models_dir": "/work/zero/assets/shared/sonic",
+      "--gs_scene_path": "/work/zero/assets/task3/assets/GS_Assets/B1_art/obj_0_gs_task3_world.ply",
+      "--gs_backend": "2dgs",
+      "--gs_foreground_mode": "isaac_mesh",
+      "--headcam_extrinsic_mode": "task_cfg",
+      "--headcam_calib": "/work/zero/assets/task3/assets/calibration/111_final_ex_0511.json",
+      "--camera_warmup_renders": 10,
+      "--two_d_gs_real2sim_root": "/work/zero/runtime/submodule/2D_GS/Real2Sim",
+      "--init_joint_state_json": "/work/zero/assets/task3/assets/evaluation/task3_initial_body_pose_episode_000000.json",
+      "--init_joint_state_mode": "episode_first_frame",
+      "--vector_env_spacing": 20,
+      "--log_every": 100,
+      "--no-gs_apply_training_color_match": true,
+      "--sonic_cpu_onnx": true,
+      "--no-reset_to_sonic_default": true,
+      "--diagnostic_video_interval": 10
+    },
+    "manifest": {
+      "path": "configs/manifests/task3_hdf5_success386_perturbed100_seed20260831.jsonl",
+      "rows": 100,
+      "sha256": "871482b6e3b0dcc26751d378f56218b8d82efe04292f76acabcb8b002573c6d0"
+    },
+    "integrity": [
+      {
+        "path": "configs/manifests/task3_hdf5_success386_perturbed100_seed20260831_contract.json",
+        "sha256": "21df4f05acf475a7b0ba41bcbf43fa2fd68873ff5daffc606a0d56602d9567ec"
+      },
+      {
+        "path": "configs/protocol/shared/processor_config.json",
+        "sha256": "842f45d252cd472b0126bd7b3ffa5441609e012e11d0d0bcaa9541a7c6a47bcb"
+      }
+    ],
+    "required_paths": [
+      "/work/zero/assets/shared/sonic/model_decoder.onnx",
+      "/work/zero/assets/shared/sonic/model_encoder.onnx",
+      "/work/zero/assets/shared/sonic/observation_config.yaml",
+      "/work/zero/assets/task3/assets/GS_Assets/B1_art/obj_0_gs_task3_world.ply",
+      "/work/zero/assets/task3/assets/GS_Assets/B1_art/obj_1_gs_task3_world.ply",
+      "/work/zero/assets/task3/assets/GS_Assets/B1_art/joint_info.json",
+      "/work/zero/assets/task3/assets/calibration/111_final_ex_0511.json",
+      "/work/zero/runtime/submodule/2D_GS/Real2Sim",
+      "/work/zero/assets/task3/assets/evaluation/task3_initial_body_pose_episode_000000.json",
+      "/work/zero/assets/task3/assets/evaluation/task3_training_scenarios_386_full_init.jsonl",
+      "/work/zero/assets/task3/scene.usdc",
+      "/work/zero/assets/task3/usd/robots/final_robot_usd_align_sonic_portable.usd",
+      "/work/zero/assets/task3/usd/assets/B1/task3_lanzi_Model_1_scaled_centered.usd",
+      "/work/zero/assets/task3/usd/assets/B1/dengzi_Model_2_scaled_centered.usd"
+    ],
+    "scene_assets": {
+      "path": "configs/scene_assets.json",
+      "sha256": "028576c08c303bbd580b6a3d2d0cc5dbfed65157643ecc9b896be3e513c5f0e0"
+    }
+  },
+  "modalities": {
+    "video": {
+      "delta_indices": [
+        0
+      ],
+      "modality_keys": [
+        "ego_view"
+      ],
+      "sin_cos_embedding_keys": null,
+      "mean_std_embedding_keys": null,
+      "action_configs": null
+    },
+    "state": {
+      "delta_indices": [
+        0
+      ],
+      "modality_keys": [
+        "left_q",
+        "right_q",
+        "left_hand_gripper",
+        "right_hand_gripper",
+        "waist",
+        "left_leg",
+        "right_leg",
+        "projected_gravity"
+      ],
+      "sin_cos_embedding_keys": null,
+      "mean_std_embedding_keys": null,
+      "action_configs": null
+    },
+    "action": {
+      "delta_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39
+      ],
+      "modality_keys": [
+        "sonic_token",
+        "left_hand_gripper",
+        "right_hand_gripper"
+      ],
+      "sin_cos_embedding_keys": null,
+      "mean_std_embedding_keys": null,
+      "action_configs": [
+        {
+          "rep": "ABSOLUTE",
+          "type": "NON_EEF",
+          "format": "DEFAULT",
+          "state_key": null
+        },
+        {
+          "rep": "ABSOLUTE",
+          "type": "NON_EEF",
+          "format": "DEFAULT",
+          "state_key": null
+        },
+        {
+          "rep": "ABSOLUTE",
+          "type": "NON_EEF",
+          "format": "DEFAULT",
+          "state_key": null
+        }
+      ]
+    },
+    "language": {
+      "delta_indices": [
+        0
+      ],
+      "modality_keys": [
+        "annotation.human.action.task_description"
+      ],
+      "sin_cos_embedding_keys": null,
+      "mean_std_embedding_keys": null,
+      "action_configs": null
+    }
+  },
+  "recorder": "record_task.py",
+  "orders": 1,
+  "reuse_pickup": false,
+  "mission": "home",
+  "station_assets": "/work/experiments/pelvis-input/room-reach",
+  "delivery_only": false,
+  "state_only": true,
+  "gate_receipt": false,
+  "observation": "task3 live GS / mesh head RGB"
+}

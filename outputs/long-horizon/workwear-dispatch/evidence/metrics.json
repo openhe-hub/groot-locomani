@@ -1,0 +1,129 @@
+{
+  "mission": "factory",
+  "control_steps": 3107,
+  "control_hz": 50,
+  "live_queries": 13,
+  "success": true,
+  "terminal_reason": "verified_dock_receiver_read",
+  "final_checks": {
+    "item_settled": true,
+    "secure": true,
+    "panel": true,
+    "receipt": true,
+    "cart_at_dock": true
+  },
+  "delivery": {
+    "ok": true,
+    "checks": {
+      "settled_window": true,
+      "on_receiving_deck": true,
+      "supported_by_cart": true,
+      "linear_settled": true,
+      "angular_settled": true
+    },
+    "min_support_n": 0.09082476794719696,
+    "cap_local": [
+      -0.32488581432224783,
+      -0.08147710620200625,
+      0.8842990606327245
+    ],
+    "max_object_lift": 0.5181934833526611,
+    "original_cabinet_evaluator": {
+      "ok": false,
+      "checks": {
+        "inside_left_top_empty_region_xy": false,
+        "above_minimum_z": true,
+        "linear_speed_settled": true,
+        "angular_speed_settled": true,
+        "stable_window_complete": true
+      },
+      "reasons": [
+        "inside_left_top_empty_region_xy"
+      ],
+      "evaluated_frame": 892,
+      "stable_frames": 10,
+      "hat_local_xy_m": [
+        -0.32488581432224783,
+        -0.08147710620200628
+      ],
+      "hat_world_z_m": 0.9092990159988403,
+      "max_object_lift": 0.5181934833526611,
+      "hat_final_linear_speed_mps": 0.008302434068764422,
+      "hat_final_angular_speed_radps": 0.008150452610104839
+    }
+  },
+  "path_m": 6.5142822265625,
+  "min_root_z": 0.7308240532875061,
+  "covered": 3,
+  "secured": true,
+  "worktop_complete": true,
+  "receipt": true,
+  "cart_displacement_m": 0.687313437461853,
+  "cart_load_travel_m": 0.6558094620704651,
+  "terminal_report": "Recovered from the logged live gate read and 40 consecutive sensor samples after terminal JSON serialization failed.",
+  "gate_read": {
+    "tag_id": "DISPATCH-PPE-17",
+    "stable_frames": 40,
+    "max_reader_distance_m": 0.08500005912927584,
+    "max_cart_position_error_m": 1.7534709943132607e-07,
+    "min_support_n": 0.09764651954174042,
+    "max_robot_to_cart_m": 0.8908466696739197
+  },
+  "duration_s": 62.14,
+  "scenario": "task2_cabinet_00009",
+  "video_fps": 25,
+  "transport_xy_m": 1.6965526342391968,
+  "lift_m": 0.5181934833526611,
+  "max_base_step_m": 0.01634916476905346,
+  "phase_s": {
+    "start": 0.0,
+    "delivered": 17.84,
+    "secure": 17.84,
+    "return": 25.1,
+    "worktop": 38.76,
+    "escort": 47.68,
+    "receipt": 61.34,
+    "complete": 62.14
+  },
+  "return_path_m": 2.016706943511963,
+  "escort_path_m": 1.897916555404663,
+  "max_payload_step_m": 0.026697523891925812,
+  "compliant_grasp": {
+    "name": "compliant_grasp",
+    "step": 226,
+    "object_xyz": [
+      -0.5489233136177063,
+      0.20435874164104462,
+      0.616443395614624
+    ],
+    "measured_contact_n": 0.029578547924757004
+  },
+  "loaded_motion_reference": {
+    "name": "loaded_route",
+    "step": 509,
+    "reference": "factory-route.npz",
+    "join_frame": 203,
+    "object_xyz": [
+      -0.25181055068969727,
+      0.4926583468914032,
+      0.8251128196716309
+    ]
+  },
+  "guided_placement": {
+    "name": "align_load",
+    "step": 800,
+    "target_xyz": [
+      0.6027396975485053,
+      1.4689073936916879,
+      0.9120001448432082
+    ],
+    "object_xyz": [
+      0.5244637727737427,
+      1.5148242712020874,
+      1.128753423690796
+    ],
+    "gap_m": 0.04354522255532506
+  },
+  "fixture_final": 1.1344088315963745,
+  "video_source": "synchronized Isaac replay of measured states"
+}

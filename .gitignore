@@ -15,13 +15,15 @@ __pycache__/
 
 # ML / experiment outputs
 wandb/
-outputs/
+# outputs/ keeps READMEs and small evidence files; videos are release assets
+/outputs/**/*.mp4
 logs/
 runs/
 out/
 recordings/
 plots/
 *.npz
+!/outputs/**/*.npz
 
 # C extensions
 *.so

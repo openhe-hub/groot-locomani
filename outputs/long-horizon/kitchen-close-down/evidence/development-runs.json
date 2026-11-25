@@ -1,0 +1,86 @@
+{
+  "scope": "Engineering trials use different control and waypoint configurations; not repeated success-rate trials.",
+  "runs": [
+    {
+      "run": "kitchen-01",
+      "asset_bundle": "room",
+      "selected": false,
+      "terminal_reason": "station_timeout",
+      "simulated_steps": 1444,
+      "success": false,
+      "raised_table_edges": false
+    },
+    {
+      "run": "kitchen-02",
+      "asset_bundle": "room",
+      "selected": false,
+      "terminal_reason": "fall",
+      "simulated_steps": 1901,
+      "success": false,
+      "raised_table_edges": false
+    },
+    {
+      "run": "kitchen-03",
+      "asset_bundle": "room-turns",
+      "selected": false,
+      "terminal_reason": "station_timeout",
+      "simulated_steps": 1582,
+      "success": false,
+      "raised_table_edges": false
+    },
+    {
+      "run": "kitchen-04",
+      "asset_bundle": "room-empty",
+      "selected": false,
+      "terminal_reason": "station_timeout",
+      "simulated_steps": 3135,
+      "success": false,
+      "raised_table_edges": false
+    },
+    {
+      "run": "kitchen-05",
+      "asset_bundle": "room-turns",
+      "selected": false,
+      "terminal_reason": "operator stop after prolonged placement stall",
+      "simulated_steps": null,
+      "success": null,
+      "raised_table_edges": false
+    },
+    {
+      "run": "kitchen-06",
+      "asset_bundle": "room-reach",
+      "selected": false,
+      "terminal_reason": "unreachable fixed placement target; stopped before launching revised receiver trial",
+      "simulated_steps": null,
+      "success": null,
+      "raised_table_edges": false
+    },
+    {
+      "run": "kitchen-07",
+      "asset_bundle": "room-tray",
+      "selected": false,
+      "terminal_reason": "station_timeout",
+      "simulated_steps": 2845,
+      "success": false,
+      "raised_table_edges": true
+    },
+    {
+      "run": "kitchen-08",
+      "asset_bundle": "room-reach",
+      "selected": true,
+      "terminal_reason": "success",
+      "simulated_steps": 3349,
+      "success": true,
+      "raised_table_edges": false
+    },
+    {
+      "run": "kitchen-09",
+      "asset_bundle": "room-clear",
+      "selected": false,
+      "terminal_reason": "stopped backup after unmodified-room run 08 passed",
+      "simulated_steps": null,
+      "success": null,
+      "raised_table_edges": false
+    }
+  ]
+}

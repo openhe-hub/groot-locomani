@@ -1,0 +1,342 @@
+{
+  "model": "Kimodo-G1-RP-v1",
+  "seed": 42,
+  "generation_fps": 30,
+  "sonic_control_hz": 50,
+  "world_frame_xy_m_columns": [
+    "generation_frame",
+    "world_x_m",
+    "world_y_m"
+  ],
+  "conditioning": "root2d in Kimodo canonical XZ; paired heading cosine/sine for the kitchen turns",
+  "sources": "Station geometry and waypoint calibration from the previous kitchen-close-down episode; no online perception of waypoints.",
+  "loaded_upper_body": "Recorded waist and arm poses from original kitchen-close-down control steps 705..1194. The legs and pelvis use newly generated motion; live GR00T supplies the pickup.",
+  "stationary_posture_source": "Original kitchen-close-down body stance at steps 1400 (lid), 3030 (sink), 4790 (light). Station targets use measured fingertip IK and sensor feedback.",
+  "legs": {
+    "loaded": {
+      "prompt": {
+        "model": "Kimodo-G1-RP-v1",
+        "seed": 42,
+        "fps": 30,
+        "prompt_phases": [
+          [
+            "Walk slowly forward while carrying a basket with both hands and stop upright.",
+            6.366666666666666
+          ]
+        ],
+        "frame_count": 191,
+        "num_denoising_steps": 100,
+        "constraint_file": "constraints.json"
+      },
+      "kimodo_conditions": [
+        {
+          "type": "root2d",
+          "frame_indices": [
+            0,
+            50,
+            105,
+            169,
+            190
+          ],
+          "smooth_root_2d": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.12758998802822713,
+              0.2453992562233163
+            ],
+            [
+              0.542406728805342,
+              0.6153006911638311
+            ],
+            [
+              1.1902970424625294,
+              0.9984953433566706
+            ],
+            [
+              1.1902970424625294,
+              0.9984953433566706
+            ]
+          ],
+          "global_root_heading": [
+            [
+              1.0,
+              0.0
+            ],
+            [
+              0.8290375725550417,
+              0.5591929034707468
+            ],
+            [
+              0.669130606358858,
+              0.7431448254773945
+            ],
+            [
+              0.4999999999999999,
+              0.8660254037844387
+            ],
+            [
+              0.4999999999999999,
+              0.8660254037844387
+            ]
+          ]
+        }
+      ],
+      "world_frame_xy_m": [
+        [
+          0.0,
+          0.34,
+          1.62
+        ],
+        [
+          50.0,
+          0.07,
+          1.68
+        ],
+        [
+          105.0,
+          -0.48,
+          1.6
+        ],
+        [
+          169.0,
+          -1.19,
+          1.35
+        ],
+        [
+          190.0,
+          -1.19,
+          1.35
+        ]
+      ]
+    },
+    "return": {
+      "prompt": {
+        "model": "Kimodo-G1-RP-v1",
+        "seed": 42,
+        "fps": 30,
+        "prompt_phases": [
+          [
+            "Turn around, walk forward slowly with relaxed arms, and stop.",
+            7.733333333333333
+          ]
+        ],
+        "frame_count": 232,
+        "num_denoising_steps": 100,
+        "constraint_file": "constraints.json"
+      },
+      "kimodo_conditions": [
+        {
+          "type": "root2d",
+          "frame_indices": [
+            0,
+            48,
+            105,
+            171,
+            210,
+            231
+          ],
+          "smooth_root_2d": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.0034202014332566917,
+              -0.009396926207859091
+            ],
+            [
+              0.025806809954167637,
+              -0.5971884196465882
+            ],
+            [
+              0.15242328485343978,
+              -1.1789686773763277
+            ],
+            [
+              0.20176391392174287,
+              -1.618606599220138
+            ],
+            [
+              0.20176391392174287,
+              -1.618606599220138
+            ]
+          ],
+          "global_root_heading": [
+            [
+              1.0,
+              0.0
+            ],
+            [
+              6.123233995736766e-17,
+              1.0
+            ],
+            [
+              -0.9396926207859083,
+              0.3420201433256689
+            ],
+            [
+              -0.9702957262759965,
+              0.24192189559966773
+            ],
+            [
+              -0.9563047559630354,
+              0.29237170472273705
+            ],
+            [
+              -0.9563047559630354,
+              0.29237170472273705
+            ]
+          ]
+        }
+      ],
+      "world_frame_xy_m": [
+        [
+          0.0,
+          -1.11,
+          1.4
+        ],
+        [
+          48.0,
+          -1.1,
+          1.4
+        ],
+        [
+          105.0,
+          -0.54,
+          1.58
+        ],
+        [
+          171.0,
+          0.05,
+          1.66
+        ],
+        [
+          210.0,
+          0.48,
+          1.764
+        ],
+        [
+          231.0,
+          0.48,
+          1.764
+        ]
+      ]
+    },
+    "escort": {
+      "prompt": {
+        "model": "Kimodo-G1-RP-v1",
+        "seed": 42,
+        "fps": 30,
+        "prompt_phases": [
+          [
+            "Turn around, walk forward slowly with relaxed arms, and stop.",
+            7.733333333333333
+          ]
+        ],
+        "frame_count": 232,
+        "num_denoising_steps": 100,
+        "constraint_file": "constraints.json"
+      },
+      "kimodo_conditions": [
+        {
+          "type": "root2d",
+          "frame_indices": [
+            0,
+            48,
+            110,
+            165,
+            210,
+            231
+          ],
+          "smooth_root_2d": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.0010467191248588776,
+              -0.019972590695091493
+            ],
+            [
+              -0.012730484143852193,
+              -0.5213807963220961
+            ],
+            [
+              -0.12532392176316165,
+              -1.0479951882684866
+            ],
+            [
+              -0.23578145747136714,
+              -1.4242917904392618
+            ],
+            [
+              -0.23578145747136714,
+              -1.4242917904392618
+            ]
+          ],
+          "global_root_heading": [
+            [
+              1.0,
+              0.0
+            ],
+            [
+              -0.034899496702500955,
+              0.9993908270190958
+            ],
+            [
+              -0.9902680687415704,
+              0.13917310096006533
+            ],
+            [
+              -0.981627183447664,
+              -0.19080899537654472
+            ],
+            [
+              -0.9563047559630354,
+              -0.29237170472273677
+            ],
+            [
+              -0.9563047559630354,
+              -0.29237170472273677
+            ]
+          ]
+        }
+      ],
+      "world_frame_xy_m": [
+        [
+          0.0,
+          0.32,
+          1.7
+        ],
+        [
+          48.0,
+          0.3,
+          1.7
+        ],
+        [
+          110.0,
+          -0.2,
+          1.66
+        ],
+        [
+          165.0,
+          -0.72,
+          1.52
+        ],
+        [
+          210.0,
+          -1.09,
+          1.39
+        ],
+        [
+          231.0,
+          -1.09,
+          1.39
+        ]
+      ]
+    }
+  }
+}

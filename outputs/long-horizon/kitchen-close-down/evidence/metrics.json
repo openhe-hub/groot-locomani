@@ -1,0 +1,153 @@
+{
+  "mission": "home",
+  "control_steps": 3349,
+  "control_hz": 50,
+  "live_queries": 18,
+  "terminal_reason": "success",
+  "delivery": {
+    "ok": true,
+    "checks": {
+      "basket_center_inside_stool_seat": true,
+      "basket_supported_by_stool": true,
+      "hands_released": true,
+      "linear_speed_settled": true,
+      "angular_speed_settled": true,
+      "height_settled": true,
+      "stable_window_complete": true,
+      "door_triggered": true,
+      "catch_surface_contact": true,
+      "door_closed": true
+    },
+    "reasons": [],
+    "evaluated_frame": 12,
+    "stable_frames": 10,
+    "basket_local_xy_m": [
+      -0.3563893696045177,
+      0.15685617085690787
+    ],
+    "basket_bottom_minus_seat_m": -0.017168768361997988,
+    "basket_visual_bottom_supported": true,
+    "robot_hand_open": [
+      0.9999728202819824,
+      0.9998592138290405
+    ],
+    "criterion_version": "released-settled-v2",
+    "basket_final_linear_speed_mps": 1.353716129809707e-06,
+    "basket_final_angular_speed_radps": 1.4200094491300431e-05,
+    "basket_tail_z_range_m": 1.1920928955078125e-07,
+    "door_trigger_delta_deg": 61.99999717184774,
+    "max_object_lift": 0.28046292066574097,
+    "door_final_deg": 61.99999717184774,
+    "door_closed_angle_reached": true,
+    "min_support_n": 0.0981169044971466,
+    "original_stool_evaluator": {
+      "ok": false,
+      "checks": {
+        "basket_center_inside_stool_seat": false,
+        "basket_supported_by_stool": false,
+        "hands_released": true,
+        "linear_speed_settled": true,
+        "angular_speed_settled": true,
+        "height_settled": true,
+        "stable_window_complete": true,
+        "door_triggered": true
+      },
+      "reasons": [
+        "basket_center_inside_stool_seat",
+        "basket_supported_by_stool"
+      ],
+      "evaluated_frame": 1098,
+      "stable_frames": 10,
+      "basket_local_xy_m": [
+        -0.5063894103330092,
+        0.27685612872942816
+      ],
+      "basket_bottom_minus_seat_m": 0.282831231638002,
+      "basket_visual_bottom_supported": false,
+      "robot_hand_open": [
+        0.9999728202819824,
+        0.9998592138290405
+      ],
+      "criterion_version": "released-settled-v2",
+      "basket_final_linear_speed_mps": 1.353716129809707e-06,
+      "basket_final_angular_speed_radps": 1.4200094491300431e-05,
+      "basket_tail_z_range_m": 1.1920928955078125e-07,
+      "door_trigger_delta_deg": 61.99999717184774,
+      "max_object_lift": 0.28046292066574097,
+      "door_final_deg": 61.99999717184774,
+      "door_closed_angle_reached": true
+    }
+  },
+  "success": true,
+  "path_m": 9.11684799194336,
+  "min_root_z": 0.6008846163749695,
+  "final_checks": {
+    "item_settled": true,
+    "secure": true,
+    "panel": true,
+    "receipt": true
+  },
+  "covered": 15,
+  "secured": true,
+  "worktop_complete": true,
+  "receipt": true,
+  "cart_displacement_m": null,
+  "duration_s": 66.98,
+  "scenario": "task3_carry_basket_00009",
+  "video_fps": 25,
+  "transport_xy_m": 2.083142042160034,
+  "lift_m": 0.28046292066574097,
+  "max_base_step_m": 0.019111311063170433,
+  "phase_s": {
+    "start": 0.0,
+    "delivered": 21.96,
+    "secure": 21.96,
+    "return": 29.84,
+    "worktop": 39.96,
+    "escort": 49.6,
+    "receipt": 62.14,
+    "complete": 66.98
+  },
+  "return_path_m": 2.327713966369629,
+  "escort_path_m": 2.6962103843688965,
+  "door_final_deg": 61.99999717184774,
+  "max_payload_step_m": 0.025531219318509102,
+  "compliant_grasp": {
+    "name": "compliant_grasp",
+    "step": 385,
+    "object_xyz": [
+      0.3033755123615265,
+      2.114952325820923,
+      0.7880795001983643
+    ],
+    "measured_contact_n": 1.588857650756836
+  },
+  "loaded_motion_reference": {
+    "name": "loaded_route",
+    "step": 715,
+    "reference": "pelvis-routes.npz",
+    "join_frame": 0,
+    "object_xyz": [
+      -0.01727444678544998,
+      1.98891282081604,
+      1.0249156951904297
+    ]
+  },
+  "guided_placement": {
+    "name": "align_load",
+    "step": 1047,
+    "target_xyz": [
+      -1.5928769812112544,
+      1.2686171193037612,
+      0.752
+    ],
+    "object_xyz": [
+      -1.5435643196105957,
+      1.2701499462127686,
+      0.8770101070404053
+    ],
+    "gap_m": 0.04933647892253823
+  },
+  "fixture_final": -0.0949999988079071,
+  "video_source": "synchronized Isaac replay of measured states"
+}

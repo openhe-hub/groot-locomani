@@ -1,0 +1,12 @@
+{
+  "steps": 589,
+  "control_hz": 50,
+  "minimum_pelvis_height_m": 0.6862010072732482,
+  "minimum_pelvis_up_z": 0.9816621979275962,
+  "pelvis_height_range_m": 0.10897980729750578,
+  "root_displacement_m": 3.552954635860744,
+  "joint_rmse_rad": 0.12840740307528542,
+  "upright": true,
+  "airborne_steps": 3,
+  "max_right_knee_flexion_rad": 1.3392962162689694
+}

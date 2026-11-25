@@ -1,0 +1,46 @@
+{
+  "model": "Kimodo-G1-RP-v1",
+  "fps": 30,
+  "prompt_phases": [
+    [
+      "Take several sideways steps to your left while facing forward.",
+      2.5
+    ],
+    [
+      "Stand on both feet and reach up high with both hands.",
+      3.4000000000000004
+    ],
+    [
+      "Walk backwards in a straight line.",
+      2.2
+    ],
+    [
+      "Stand still and clap your hands together in front of your chest.",
+      3.7
+    ]
+  ],
+  "source_clips": [
+    [
+      "sidestep",
+      6,
+      90
+    ],
+    [
+      "reach",
+      0,
+      120
+    ],
+    [
+      "backward",
+      6,
+      90
+    ],
+    [
+      "clap",
+      0,
+      120
+    ]
+  ],
+  "overlap_frames": 18,
+  "method": "SE(2) alignment, quintic crossfade and root quaternion SLERP"
+}

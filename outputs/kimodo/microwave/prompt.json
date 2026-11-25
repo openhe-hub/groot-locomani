@@ -1,0 +1,22 @@
+{
+  "model": "Kimodo-G1-RP-v1",
+  "seed": 42,
+  "fps": 30,
+  "approach_seconds": 2.65,
+  "prompt_phases": [
+    [
+      "Walk up to the open microwave.",
+      2.65
+    ],
+    [
+      "Push the microwave door closed with your right hand.",
+      3.55
+    ],
+    [
+      "Withdraw the hand and stand clear.",
+      2.3
+    ]
+  ],
+  "readout": "Door opening",
+  "control": "Kimodo walk/stand, SONIC body tracking, state-guided right-arm IK"
+}

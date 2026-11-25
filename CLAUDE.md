@@ -49,11 +49,12 @@ gr00t/              # Main package
   model/            #   Model architecture (N1.7, base, modules)
   policy/           #   Policy inference (Gr00tPolicy, server/client)
 examples/           # Per-embodiment example configs and READMEs
-  g1_loco_manipulation/  # G1 box and banana demo reproduction
+  g1_loco_manipulation/  # G1 demos: box, banana, Kimodo+SONIC walks, long-horizon missions
 scripts/            # Deployment, conversion, and utility scripts
   deployment/       #   Platform install scripts (dgpu, orin, thor, spark)
 tests/              # pytest suite (markers: gpu, not gpu)
-docs/guides/        # User-facing guides and inference notebook
+docs/               # long-horizon.md (G1 GR00T/Kimodo/SONIC architecture), assets/
+  guides/           #   User-facing guides and inference notebook
 third_party/        # Pinned simulation and benchmark submodules
 ```
 

@@ -1,0 +1,361 @@
+[
+  {
+    "name": "start",
+    "step": 0,
+    "secure_anchor": [
+      -1.2450000047683716,
+      1.0149999856948853,
+      0.925000011920929
+    ],
+    "robot": [
+      0.31649982929229736,
+      1.600205421447754,
+      0.7981445789337158,
+      0.7107542157173157,
+      0.013290314935147762,
+      0.001078335102647543,
+      0.7033140659332275
+    ]
+  },
+  {
+    "name": "compliant_grasp",
+    "step": 385,
+    "object_xyz": [
+      0.3033755123615265,
+      2.114952325820923,
+      0.7880795001983643
+    ],
+    "measured_contact_n": 1.588857650756836
+  },
+  {
+    "name": "loaded_route",
+    "step": 715,
+    "reference": "pelvis-routes.npz",
+    "join_frame": 0,
+    "object_xyz": [
+      -0.01727444678544998,
+      1.98891282081604,
+      1.0249156951904297
+    ]
+  },
+  {
+    "name": "cupboard_latched",
+    "step": 935,
+    "robot_xyz": [
+      -0.3294708728790283,
+      1.578567624092102,
+      0.7280851602554321
+    ]
+  },
+  {
+    "name": "align_load",
+    "step": 1047,
+    "target_xyz": [
+      -1.5928769812112544,
+      1.2686171193037612,
+      0.752
+    ],
+    "object_xyz": [
+      -1.5435643196105957,
+      1.2701499462127686,
+      0.8770101070404053
+    ],
+    "gap_m": 0.04933647892253823
+  },
+  {
+    "name": "released_over_receiver",
+    "step": 1060,
+    "object_xyz": [
+      -1.5711452960968018,
+      1.2579176425933838,
+      0.8325871229171753
+    ],
+    "gap_m": 0.02138877380981985,
+    "height_above_deck_m": 0.0975871229171753
+  },
+  {
+    "name": "delivered",
+    "step": 1098,
+    "queries": 18,
+    "checks": {
+      "ok": true,
+      "checks": {
+        "basket_center_inside_stool_seat": true,
+        "basket_supported_by_stool": true,
+        "hands_released": true,
+        "linear_speed_settled": true,
+        "angular_speed_settled": true,
+        "height_settled": true,
+        "stable_window_complete": true,
+        "door_triggered": true,
+        "catch_surface_contact": true,
+        "door_closed": true
+      },
+      "reasons": [],
+      "evaluated_frame": 12,
+      "stable_frames": 10,
+      "basket_local_xy_m": [
+        -0.3563893696045177,
+        0.15685617085690787
+      ],
+      "basket_bottom_minus_seat_m": -0.017168768361997988,
+      "basket_visual_bottom_supported": true,
+      "robot_hand_open": [
+        0.9999728202819824,
+        0.9998592138290405
+      ],
+      "criterion_version": "released-settled-v2",
+      "basket_final_linear_speed_mps": 1.353716129809707e-06,
+      "basket_final_angular_speed_radps": 1.4200094491300431e-05,
+      "basket_tail_z_range_m": 1.1920928955078125e-07,
+      "door_trigger_delta_deg": 61.99999717184774,
+      "max_object_lift": 0.28046292066574097,
+      "door_final_deg": 61.99999717184774,
+      "door_closed_angle_reached": true,
+      "min_support_n": 0.0981169044971466,
+      "original_stool_evaluator": {
+        "ok": false,
+        "checks": {
+          "basket_center_inside_stool_seat": false,
+          "basket_supported_by_stool": false,
+          "hands_released": true,
+          "linear_speed_settled": true,
+          "angular_speed_settled": true,
+          "height_settled": true,
+          "stable_window_complete": true,
+          "door_triggered": true
+        },
+        "reasons": [
+          "basket_center_inside_stool_seat",
+          "basket_supported_by_stool"
+        ],
+        "evaluated_frame": 1098,
+        "stable_frames": 10,
+        "basket_local_xy_m": [
+          -0.5063894103330092,
+          0.27685612872942816
+        ],
+        "basket_bottom_minus_seat_m": 0.282831231638002,
+        "basket_visual_bottom_supported": false,
+        "robot_hand_open": [
+          0.9999728202819824,
+          0.9998592138290405
+        ],
+        "criterion_version": "released-settled-v2",
+        "basket_final_linear_speed_mps": 1.353716129809707e-06,
+        "basket_final_angular_speed_radps": 1.4200094491300431e-05,
+        "basket_tail_z_range_m": 1.1920928955078125e-07,
+        "door_trigger_delta_deg": 61.99999717184774,
+        "max_object_lift": 0.28046292066574097,
+        "door_final_deg": 61.99999717184774,
+        "door_closed_angle_reached": true
+      }
+    }
+  },
+  {
+    "name": "secure",
+    "step": 1098,
+    "base": [
+      -1.2283215522766113,
+      1.3366674184799194,
+      0.7619984149932861
+    ]
+  },
+  {
+    "name": "handle_engaged",
+    "step": 1287,
+    "distance_m": 0.054984749973213974
+  },
+  {
+    "name": "lid_seated",
+    "step": 1407,
+    "measured": -0.08641807734966278
+  },
+  {
+    "name": "kimodo_walk",
+    "step": 1492,
+    "leg": "return",
+    "frames": 386
+  },
+  {
+    "name": "return",
+    "step": 1492,
+    "base": [
+      -1.0172853469848633,
+      1.4975242614746094,
+      0.6592317223548889
+    ]
+  },
+  {
+    "name": "arrived",
+    "step": 1998,
+    "leg": "return",
+    "xy": [
+      0.395168662071228,
+      1.6789302825927734
+    ]
+  },
+  {
+    "name": "worktop",
+    "step": 1998,
+    "base": [
+      0.395168662071228,
+      1.6789302825927734,
+      0.7958841323852539
+    ]
+  },
+  {
+    "name": "wipe_cell",
+    "step": 2133,
+    "index": 0,
+    "distance_m": 0.022709670968967782
+  },
+  {
+    "name": "wipe_cell",
+    "step": 2154,
+    "index": 1,
+    "distance_m": 0.019715590667286356
+  },
+  {
+    "name": "wipe_cell",
+    "step": 2175,
+    "index": 2,
+    "distance_m": 0.01577565195918089
+  },
+  {
+    "name": "wipe_cell",
+    "step": 2195,
+    "index": 3,
+    "distance_m": 0.019162630273807702
+  },
+  {
+    "name": "wipe_cell",
+    "step": 2214,
+    "index": 4,
+    "distance_m": 0.01656324757235101
+  },
+  {
+    "name": "wipe_cell",
+    "step": 2230,
+    "index": 5,
+    "distance_m": 0.011376972044746442
+  },
+  {
+    "name": "wipe_cell",
+    "step": 2246,
+    "index": 6,
+    "distance_m": 0.029910204280315676
+  },
+  {
+    "name": "wipe_cell",
+    "step": 2267,
+    "index": 7,
+    "distance_m": 0.017864135191421087
+  },
+  {
+    "name": "wipe_cell",
+    "step": 2287,
+    "index": 8,
+    "distance_m": 0.017493181147416437
+  },
+  {
+    "name": "wipe_cell",
+    "step": 2305,
+    "index": 9,
+    "distance_m": 0.015453433032199954
+  },
+  {
+    "name": "wipe_cell",
+    "step": 2325,
+    "index": 10,
+    "distance_m": 0.020399734372236477
+  },
+  {
+    "name": "wipe_cell",
+    "step": 2345,
+    "index": 11,
+    "distance_m": 0.018546464166386067
+  },
+  {
+    "name": "wipe_cell",
+    "step": 2364,
+    "index": 12,
+    "distance_m": 0.01278855180363009
+  },
+  {
+    "name": "wipe_cell",
+    "step": 2380,
+    "index": 13,
+    "distance_m": 0.021695845924228418
+  },
+  {
+    "name": "wipe_cell",
+    "step": 2398,
+    "index": 14,
+    "distance_m": 0.017411219228210505
+  },
+  {
+    "name": "board_complete",
+    "step": 2480,
+    "positions": 15
+  },
+  {
+    "name": "kimodo_walk",
+    "step": 2480,
+    "leg": "escort",
+    "frames": 386
+  },
+  {
+    "name": "escort",
+    "step": 2480,
+    "base": [
+      0.3906216323375702,
+      1.7259764671325684,
+      0.7901999950408936
+    ]
+  },
+  {
+    "name": "dock_adjustment",
+    "step": 2986,
+    "station": "receiver",
+    "attempt": 1,
+    "start_error_m": 0.3476231503956243,
+    "goal": [
+      -1.1150000000000002,
+      1.4249999999999998
+    ]
+  },
+  {
+    "name": "arrived",
+    "step": 3107,
+    "leg": "escort",
+    "xy": [
+      -1.1516923904418945,
+      1.4386987686157227
+    ]
+  },
+  {
+    "name": "receipt",
+    "step": 3107,
+    "base": [
+      -1.1516923904418945,
+      1.4386987686157227,
+      0.785504937171936
+    ]
+  },
+  {
+    "name": "pantry_light_off",
+    "step": 3264,
+    "distance_m": 0.027051502484896114
+  },
+  {
+    "name": "complete",
+    "step": 3349,
+    "checks": {
+      "item_settled": true,
+      "secure": true,
+      "panel": true,
+      "receipt": true
+    }
+  }
+]

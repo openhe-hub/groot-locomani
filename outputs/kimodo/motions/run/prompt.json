@@ -1,0 +1,13 @@
+{
+  "model": "Kimodo-G1-RP-v1",
+  "seed": 42,
+  "fps": 30,
+  "prompt_phases": [
+    [
+      "Run straight forward at a brisk jogging pace.",
+      4
+    ]
+  ],
+  "transition_frames": 8,
+  "denoising_steps": 100
+}

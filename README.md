@@ -16,7 +16,7 @@
 
 ## Unitree G1 loco-manipulation demos
 
-The [G1 demo guide](examples/g1_loco_manipulation/README.md) covers the GR00T N1.6 box carry and N1.7 banana pick-and-place, including reproduction commands and recording locations.
+The [G1 demo guide](examples/g1_loco_manipulation/README.md) covers the GR00T N1.6 box carry, the N1.7 banana pick-and-place, Kimodo-generated walks tracked by SONIC, and a long-horizon kitchen mission that hands body control from GR00T N1.7 to Kimodo gaits through a shared SONIC decoder. The [long-horizon architecture note](docs/long-horizon.md) explains that control chain.
 
 ## Table of Contents
 

@@ -1,0 +1,21 @@
+{
+  "steps": 424,
+  "control_hz": 50,
+  "minimum_pelvis_height_m": 0.7274115395181233,
+  "minimum_pelvis_up_z": 0.9885397049180344,
+  "pelvis_height_range_m": 0.06922557652982575,
+  "root_displacement_m": 1.3775801350007684,
+  "joint_rmse_rad": 0.11046401706890546,
+  "upright": true,
+  "airborne_steps": 7,
+  "max_right_knee_flexion_rad": 1.391667673855347,
+  "initial_readout": -0.0020548200208025946,
+  "final_readout": 0.0030916916390122395,
+  "hand_contact_steps": 0,
+  "other_robot_contacts": [],
+  "released": true,
+  "first_contact_s": null,
+  "task_success": false,
+  "start_offset_m": 0.57,
+  "approach_only": true
+}
