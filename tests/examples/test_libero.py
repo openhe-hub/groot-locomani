@@ -54,7 +54,7 @@ SHARED_DATASETS_ROOT = TEST_CACHE_PATH / "datasets"
 SHARED_DATASET_ROOT = SHARED_DATASETS_ROOT / DATASET_REL_PATH
 MODEL_CHECKPOINT = pathlib.Path(f"/tmp/libero_spatial/checkpoint-{TRAINING_STEPS}")
 
-LIBERO_REPO_PATH = REPO_ROOT / "external_dependencies/LIBERO"
+LIBERO_REPO_PATH = REPO_ROOT / "third_party/LIBERO"
 SHARED_LIBERO_REPO = TEST_CACHE_PATH / "repos/LIBERO"
 
 LIBERO_UV_ENV = REPO_ROOT / "gr00t/eval/sim/LIBERO/libero_uv"
@@ -110,7 +110,7 @@ def _copy_tree_with_timing(
 
 
 def _prepare_libero_repo(env: dict[str, str]) -> None:
-    """Populate external_dependencies/LIBERO, reusing shared cache when available.
+    """Populate third_party/LIBERO, reusing shared cache when available.
 
     The cache stores both the working tree (which includes the .git pointer file)
     and the git modules directory, so that after restore git sees a fully
@@ -146,7 +146,7 @@ def _prepare_libero_repo(env: dict[str, str]) -> None:
     # Slow path: git submodule init, then populate cache.
     with timed("step 3a.miss.1: git submodule update --init"):
         run_subprocess_step(
-            ["git", "submodule", "update", "--init", "external_dependencies/LIBERO"],
+            ["git", "submodule", "update", "--init", "third_party/LIBERO"],
             step="libero_repo_init",
             cwd=REPO_ROOT,
             env=env,

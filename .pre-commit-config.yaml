@@ -1,4 +1,4 @@
-exclude: ^(external_dependencies/)
+exclude: ^(third_party/)
 repos:
   # Ruff: lint + autofix
   - repo: https://github.com/astral-sh/ruff-pre-commit

@@ -98,11 +98,11 @@ To download RoboCasa demonstration datasets, you **must** use the robocasa venv 
 ```bash
 # Download human demonstration datasets
 gr00t/eval/sim/robocasa/robocasa_uv/.venv/bin/python \
-    external_dependencies/robocasa/robocasa/scripts/download_datasets.py --ds_types human_im
+    third_party/robocasa/robocasa/scripts/download_datasets.py --ds_types human_im
 
 # Download machine-generated datasets
 gr00t/eval/sim/robocasa/robocasa_uv/.venv/bin/python \
-    external_dependencies/robocasa/robocasa/scripts/download_datasets.py --ds_types mg
+    third_party/robocasa/robocasa/scripts/download_datasets.py --ds_types mg
 ```
 
 > **Note:** Running `python -m robocasa.scripts.download_datasets` from the main project environment will fail because `robocasa` depends on `robosuite`, which is only installed in the robocasa venv.

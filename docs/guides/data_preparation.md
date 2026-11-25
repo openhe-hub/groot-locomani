@@ -10,7 +10,7 @@ This guide shows how to convert your robot data to work with our flavor of the [
 
 If you already have a dataset in the LeRobot v2 format, you can skip this section.
 
-If you have a dataset in the LeRobot v3.0 format, please use [this script](../scripts/lerobot_conversion/convert_v3_to_v2.py) to convert it to the LeRobot v2 format.
+If you have a dataset in the LeRobot v3.0 format, please use [this script](../../scripts/lerobot_conversion/convert_v3_to_v2.py) to convert it to the LeRobot v2 format.
 
 > **Why LeRobot v2?** GR00T currently uses the LeRobot v2 data format because many upstream datasets (DROID, LIBERO, Bridge, etc.) are published in v2. We plan to support both v2 and v3 formats natively in a future release. For now, please convert v3 datasets to v2 using the script above.
 
@@ -54,7 +54,7 @@ Each parquet file will contain:
 - Annotations: stored as annotation.<annotation_source>.<annotation_type>(.<annotation_name>) (see the annotation field in the example configuration for example naming.).  No other columns should have the annotation prefix, see the (multiple-annotation-support) if interested in adding multiple annotations.
 
 #### Example Parquet File
-Here is an illustrative parquet row. The language annotation column uses the same key as the [`cube_to_bowl`](../demo_data/cube_to_bowl_5/) demo dataset (`annotation.human.task_description`).
+Here is an illustrative parquet row. The language annotation column uses the same key as the [`cube_to_bowl`](../../demo_data/cube_to_bowl_5/) demo dataset (`annotation.human.task_description`).
 ```
 {
     "observation.state":[-0.01,...,0],       // 1D array: all state modalities concatenated per modality.json order
@@ -155,7 +155,7 @@ We require an additional metadata file `meta/modality.json` that is not present 
 For a concrete example of `modality.json` and the full dataset structure, see the publicly available datasets on HuggingFace:
 [nvidia/PhysicalAI-Robotics-GR00T-X-Embodiment-Sim](https://huggingface.co/datasets/nvidia/PhysicalAI-Robotics-GR00T-X-Embodiment-Sim/tree/main).
 
-You can also find a working example in the included demo data at [`demo_data/cube_to_bowl_5/meta/modality.json`](../demo_data/cube_to_bowl_5/meta/modality.json).
+You can also find a working example in the included demo data at [`demo_data/cube_to_bowl_5/meta/modality.json`](../../demo_data/cube_to_bowl_5/meta/modality.json).
 
 #### Notes
 

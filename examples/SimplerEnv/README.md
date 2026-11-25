@@ -173,4 +173,4 @@ simpler_env_widowx/widowx_carrot_on_plate
 simpler_env_widowx/widowx_stack_cube
 ```
 
-you can replace the env_name with the corresponding tasks listed in the SimplerEnv fork this repo pins at `external_dependencies/SimplerEnv` (see `.gitmodules`).
+you can replace the env_name with the corresponding tasks listed in the SimplerEnv fork this repo pins at `third_party/SimplerEnv` (see `.gitmodules`).

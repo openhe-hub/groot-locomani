@@ -49,10 +49,12 @@ gr00t/              # Main package
   model/            #   Model architecture (N1.7, base, modules)
   policy/           #   Policy inference (Gr00tPolicy, server/client)
 examples/           # Per-embodiment example configs and READMEs
+  g1_loco_manipulation/  # G1 box and banana demo reproduction
 scripts/            # Deployment, conversion, and utility scripts
   deployment/       #   Platform install scripts (dgpu, orin, thor, spark)
 tests/              # pytest suite (markers: gpu, not gpu)
-getting_started/    # User-facing guides and notebooks
+docs/guides/        # User-facing guides and inference notebook
+third_party/        # Pinned simulation and benchmark submodules
 ```
 
 ## Key entry points

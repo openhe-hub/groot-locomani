@@ -111,5 +111,5 @@ The robot-side controller follows the GR00T Whole-Body Control VLA inference wor
 - [SONIC paper](https://nvlabs.github.io/GEAR-SONIC/static/pdf/sonic_paper.pdf)
 - [GR00T Whole-Body Control documentation](https://nvlabs.github.io/GR00T-WholeBodyControl/)
 - [GEAR-SONIC project page](https://nvlabs.github.io/GEAR-SONIC/)
-- [GR00T data preparation guide](../../getting_started/data_preparation.md)
-- [GR00T policy server/client guide](../../getting_started/policy.md)
+- [GR00T data preparation guide](../../docs/guides/data_preparation.md)
+- [GR00T policy server/client guide](../../docs/guides/policy.md)

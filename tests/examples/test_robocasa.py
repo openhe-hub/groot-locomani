@@ -51,32 +51,32 @@ MODEL_CHECKPOINT = pathlib.Path(f"/tmp/robocasa_finetune/checkpoint-{TRAINING_ST
 _ROBOCASA_DATASET_ENV = "ROBOCASA_DATASET_PATH"
 _SHARED_ROBOCASA_DATASET = TEST_CACHE_PATH / "datasets/robocasa"
 
-ROBOCASA_SUBMODULE_PATH = REPO_ROOT / "external_dependencies/robocasa"
+ROBOCASA_SUBMODULE_PATH = REPO_ROOT / "third_party/robocasa"
 SHARED_ROBOCASA_REPO = TEST_CACHE_PATH / "repos/robocasa"
 
-ROBOCASA_ASSETS_REPO_DIR = REPO_ROOT / "external_dependencies/robocasa/robocasa/models/assets"
+ROBOCASA_ASSETS_REPO_DIR = REPO_ROOT / "third_party/robocasa/robocasa/models/assets"
 ROBOCASA_ASSETS_SHARED_DIR = TEST_CACHE_PATH / "robocasa-assets"
 # Version file written alongside cached assets to detect robocasa submodule updates.
 _ASSETS_VERSION_FILE = ROBOCASA_ASSETS_SHARED_DIR / ".robocasa_commit"
 
 
 def _robocasa_submodule_commit() -> str:
-    """Return the robocasa submodule commit hash recorded in the main repo HEAD.
+    """Return the robocasa submodule commit hash pinned in the main repo index.
 
-    Uses ``git ls-tree`` against the main repo so this works even before the
+    Uses ``git ls-files --stage`` against the main repo so this works even before the
     submodule is initialized.
     """
     try:
         result = subprocess.run(
-            ["git", "ls-tree", "HEAD", "external_dependencies/robocasa"],
+            ["git", "ls-files", "--stage", "--", "third_party/robocasa"],
             capture_output=True,
             text=True,
             check=True,
             cwd=REPO_ROOT,
         )
-        # output: "160000 commit <hash>\texternal_dependencies/robocasa"
+        # output: "160000 <hash> 0\tthird_party/robocasa"
         parts = result.stdout.split()
-        return parts[2] if len(parts) >= 3 else "unknown"
+        return parts[1] if parts[:1] == ["160000"] else "unknown"
     except Exception:
         return "unknown"
 
@@ -180,7 +180,7 @@ def _git_modules_path(submodule_path: pathlib.Path) -> pathlib.Path | None:
 
 
 def _prepare_robocasa_repo(env: dict[str, str]) -> None:
-    """Populate external_dependencies/robocasa from shared cache, or init and cache it."""
+    """Populate third_party/robocasa from shared cache, or init and cache it."""
     if _robocasa_submodule_initialized():
         return
 
@@ -203,7 +203,7 @@ def _prepare_robocasa_repo(env: dict[str, str]) -> None:
         shutil.rmtree(ROBOCASA_SUBMODULE_PATH)
 
     run_subprocess_step(
-        ["git", "submodule", "update", "--init", "external_dependencies/robocasa"],
+        ["git", "submodule", "update", "--init", "third_party/robocasa"],
         step="robocasa_repo_init",
         cwd=REPO_ROOT,
         env=env,

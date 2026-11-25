@@ -56,7 +56,7 @@ The evaluation produces visualizations comparing predicted actions against groun
 
 <img src="../../media/open_loop_eval_rebot_arm_dm.jpg" width="800" alt="Open-loop evaluation results showing predicted vs ground truth trajectories" />
 
-To read these numbers and decide whether your fine-tune is working, see [Interpreting the Result: Is My Fine-tune Working?](../../getting_started/finetune_new_embodiment.md#interpreting-the-result-is-my-fine-tune-working).
+To read these numbers and decide whether your fine-tune is working, see [Interpreting the Result: Is My Fine-tune Working?](../../docs/guides/finetune_new_embodiment.md#interpreting-the-result-is-my-fine-tune-working).
 
 ## Closed-Loop Evaluation
 

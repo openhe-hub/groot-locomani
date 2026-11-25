@@ -88,8 +88,8 @@ INSTALL_ROBOCASA_NO_DEPS=0
 
 case "$ROBOCASA_SETUP_VARIANT" in
   robocasa)
-    ROBOCASA_REPO="$PROJECT_REPO/external_dependencies/robocasa"
-    ROBOCASA_PATH="external_dependencies/robocasa"
+    ROBOCASA_REPO="$PROJECT_REPO/third_party/robocasa"
+    ROBOCASA_PATH="third_party/robocasa"
     UV_ENV="$SCRIPT_DIR/robocasa_uv"
     SANITY_GYM_IMPORT="import robocasa.utils.gym_utils.gymnasium_groot"
     SANITY_ENV_ID="robocasa_panda_omron/OpenSingleDoor_PandaOmron_Env"
@@ -106,7 +106,7 @@ case "$ROBOCASA_SETUP_VARIANT" in
     fi
     ;;
   robocasa365)
-    ROBOCASA_REPO="$PROJECT_REPO/external_dependencies/robocasa365"
+    ROBOCASA_REPO="$PROJECT_REPO/third_party/robocasa365"
     ROBOCASA365_PIN="${ROBOCASA365_PIN:-be22d659b02db8f6d7f3a3c3edc742934fdcbaae}"
     ASSETS_CACHE_ROOT="${ROBOCASA365_ASSETS_CACHE_ROOT:-}"
     UV_ENV="$PROJECT_REPO/gr00t/eval/sim/robocasa365/robocasa365_uv"

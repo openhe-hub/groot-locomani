@@ -3,7 +3,7 @@ set -euxo pipefail
 
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 PROJECT_REPO="$SCRIPT_DIR/../../../.."
-SIMPLER_REPO="$PROJECT_REPO/external_dependencies/SimplerEnv"
+SIMPLER_REPO="$PROJECT_REPO/third_party/SimplerEnv"
 UV_ENV="$SCRIPT_DIR/simpler_uv"
 
 git submodule update --init --recursive $SIMPLER_REPO

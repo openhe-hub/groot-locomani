@@ -1,12 +1,21 @@
 [submodule "external_dependencies/LIBERO"]
-	path = external_dependencies/LIBERO
+	path = third_party/LIBERO
 	url = https://github.com/Lifelong-Robot-Learning/LIBERO.git
 [submodule "external_dependencies/robocasa-gr1-tabletop-tasks"]
-	path = external_dependencies/robocasa-gr1-tabletop-tasks
+	path = third_party/robocasa-gr1-tabletop-tasks
 	url = https://github.com/robocasa/robocasa-gr1-tabletop-tasks
 [submodule "external_dependencies/SimplerEnv"]
-	path = external_dependencies/SimplerEnv
+	path = third_party/SimplerEnv
 	url = https://github.com/squarefk/SimplerEnv.git
 [submodule "external_dependencies/robocasa"]
-	path = external_dependencies/robocasa
+	path = third_party/robocasa
 	url = https://github.com/squarefk/robocasa
+[submodule "wholebody/IsaacLab-Arena"]
+	path = third_party/IsaacLab-Arena
+	url = https://github.com/isaac-sim/IsaacLab-Arena.git
+[submodule "wholebody/Zero-HLM-Bench"]
+	path = third_party/Zero-HLM-Bench
+	url = https://github.com/BIGAI-General-Vision-Lab/Zero-HLM-Bench.git
+[submodule "third_party/kimodo"]
+	path = third_party/kimodo
+	url = https://github.com/nv-tlabs/kimodo.git

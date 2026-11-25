@@ -29,7 +29,7 @@ pytestmark = pytest.mark.serial
 
 
 REPO_ROOT = get_root()
-POLICY_README = REPO_ROOT / "getting_started" / "policy.md"
+POLICY_README = REPO_ROOT / "docs" / "guides" / "policy.md"
 
 
 # ---------------------------------------------------------------------------

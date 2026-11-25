@@ -5,7 +5,7 @@ set -euxo pipefail
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 # Set paths relative to script location
-LIBERO_REPO="$SCRIPT_DIR/../../../../external_dependencies/LIBERO"
+LIBERO_REPO="$SCRIPT_DIR/../../../../third_party/LIBERO"
 PROJECT_REPO="$SCRIPT_DIR/../../../.."
 LIBERO_UV_ENV="$SCRIPT_DIR/libero_uv"
 

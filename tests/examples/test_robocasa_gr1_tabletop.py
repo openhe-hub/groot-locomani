@@ -50,11 +50,11 @@ MODEL_CHECKPOINT = pathlib.Path(f"/tmp/gr1_tabletop_finetune/checkpoint-{TRAININ
 _ROBOCASA_GR1_DATASET_ENV = "ROBOCASA_GR1_DATASET_PATH"
 _SHARED_ROBOCASA_GR1_DATASET = TEST_CACHE_PATH / "datasets/robocasa-gr1-tabletop-tasks"
 
-ROBOCASA_SUBMODULE_PATH = REPO_ROOT / "external_dependencies/robocasa-gr1-tabletop-tasks"
+ROBOCASA_SUBMODULE_PATH = REPO_ROOT / "third_party/robocasa-gr1-tabletop-tasks"
 SHARED_ROBOCASA_REPO = TEST_CACHE_PATH / "repos/robocasa-gr1-tabletop-tasks"
 
 ROBOCASA_ASSETS_REPO_DIR = (
-    REPO_ROOT / "external_dependencies/robocasa-gr1-tabletop-tasks/robocasa/models/assets"
+    REPO_ROOT / "third_party/robocasa-gr1-tabletop-tasks/robocasa/models/assets"
 )
 ROBOCASA_ASSETS_SHARED_DIR = TEST_CACHE_PATH / "robocasa-gr1-tabletop-tasks/assets"
 # Version file written alongside cached assets to detect submodule updates.
@@ -62,17 +62,17 @@ _ASSETS_VERSION_FILE = ROBOCASA_ASSETS_SHARED_DIR / ".robocasa_gr1_commit"
 
 
 def _robocasa_submodule_commit() -> str:
-    """Return the robocasa-gr1-tabletop-tasks submodule commit hash recorded in HEAD."""
+    """Return the robocasa-gr1-tabletop-tasks submodule commit hash pinned in the main repo index."""
     try:
         result = subprocess.run(
-            ["git", "ls-tree", "HEAD", "external_dependencies/robocasa-gr1-tabletop-tasks"],
+            ["git", "ls-files", "--stage", "--", "third_party/robocasa-gr1-tabletop-tasks"],
             capture_output=True,
             text=True,
             check=True,
             cwd=REPO_ROOT,
         )
         parts = result.stdout.split()
-        return parts[2] if len(parts) >= 3 else "unknown"
+        return parts[1] if parts[:1] == ["160000"] else "unknown"
     except Exception:
         return "unknown"
 
@@ -166,7 +166,7 @@ def _git_modules_path(submodule_path: pathlib.Path) -> pathlib.Path | None:
 
 
 def _prepare_robocasa_repo(env: dict[str, str]) -> None:
-    """Populate external_dependencies/robocasa-gr1-tabletop-tasks from cache, or init+cache."""
+    """Populate third_party/robocasa-gr1-tabletop-tasks from cache, or init+cache."""
     if _robocasa_submodule_initialized():
         return
 
@@ -191,7 +191,7 @@ def _prepare_robocasa_repo(env: dict[str, str]) -> None:
             "submodule",
             "update",
             "--init",
-            "external_dependencies/robocasa-gr1-tabletop-tasks",
+            "third_party/robocasa-gr1-tabletop-tasks",
         ],
         step="robocasa_gr1_repo_init",
         cwd=REPO_ROOT,

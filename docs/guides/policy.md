@@ -42,7 +42,7 @@ For example, `--embodiment-tag OXE_DROID_RELATIVE_EEF_RELATIVE_JOINT` and `--emb
 - **Pretrain tags** (e.g., `OXE_DROID_RELATIVE_EEF_RELATIVE_JOINT`, `XDOF`, `REAL_G1`) — use for zero-shot inference on datasets that match the pretrained embodiment. The modality config is loaded from the base model checkpoint.
 - **Posttrain tags** (`OXE_DROID_RELATIVE_EEF_RELATIVE_JOINT`, `UNITREE_G1_SONIC`, `LIBERO_PANDA`, `SIMPLER_ENV_GOOGLE`, `SIMPLER_ENV_WIDOWX`) — require a finetuned checkpoint. Passing these to the base model will produce an error.
 - **`NEW_EMBODIMENT`** — use for custom robots. Requires a `--modality-config-path` during finetuning. After finetuning, the config is saved in the checkpoint and loaded automatically during inference.
-    - Only one `NEW_EMBODIMENT` modality config may be registered per Python process. Examples like [`examples/SO100/so100_config.py`](../examples/SO100/so100_config.py) and [`examples/mask-guided-background-suppression/so101_config.py`](../examples/mask-guided-background-suppression/so101_config.py) each register under this tag; importing both in the same process will fail. In normal CLI use the selected `--modality-config-path` is the only one imported, so this is not an issue — just don't wire both configs into the same script.
+    - Only one `NEW_EMBODIMENT` modality config may be registered per Python process. Examples like [`examples/SO100/so100_config.py`](../../examples/SO100/so100_config.py) and [`examples/mask-guided-background-suppression/so101_config.py`](../../examples/mask-guided-background-suppression/so101_config.py) each register under this tag; importing both in the same process will fail. In normal CLI use the selected `--modality-config-path` is the only one imported, so this is not an issue — just don't wire both configs into the same script.
 
 #### Known Embodiment Tags
 
@@ -94,7 +94,7 @@ This parameter is robot-agnostic — the same value works across different datas
 ### `--inference-mode`
 
 - `pytorch` — standard PyTorch inference (default, no setup required)
-- `tensorrt` — accelerated inference using TensorRT engine (requires ONNX export + engine build first, see [Deployment Guide](../scripts/deployment/README.md))
+- `tensorrt` — accelerated inference using TensorRT engine (requires ONNX export + engine build first, see [Deployment Guide](../../scripts/deployment/README.md))
 
 ### Expected Output (PyTorch mode)
 
@@ -108,7 +108,7 @@ The inference scripts produce:
 | Dataset | Embodiment Tag | Notes |
 |---------|---------------|-------|
 | `demo_data/droid_sample` | `OXE_DROID_RELATIVE_EEF_RELATIVE_JOINT` | DROID — works with base model (zero-shot) or finetuned `nvidia/GR00T-N1.7-DROID` |
-| `demo_data/libero_demo` | `LIBERO_PANDA` | LIBERO Panda — uses finetuned checkpoint from `nvidia/GR00T-N1.7-LIBERO` (must be downloaded locally first, see [README](../README.md)) |
+| `demo_data/libero_demo` | `LIBERO_PANDA` | LIBERO Panda — uses finetuned checkpoint from `nvidia/GR00T-N1.7-LIBERO` (must be downloaded locally first, see [README](../../README.md)) |
 | `demo_data/cube_to_bowl_5` | `NEW_EMBODIMENT` | SO100 arm — only works with a finetuned checkpoint, not the base model |
 
 ## Understanding the Observation Format
@@ -489,7 +489,7 @@ If your environment is set up correctly, replaying ground-truth actions should a
 GR00T's server–client architecture allows you to keep the **client side extremely lightweight**, making it easy to embed into any custom deployment pipeline without pulling in the full dependency stack.
 
 For a minimal working example, see  
-[`eval_so100.py`](../gr00t/eval/real_robot/SO100/eval_so100.py).
+[`eval_so100.py`](../../gr00t/eval/real_robot/SO100/eval_so100.py).
 
 In most cases, your deployment environment only needs to install the local GR00T client code:
 

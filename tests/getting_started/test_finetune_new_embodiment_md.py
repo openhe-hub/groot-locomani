@@ -24,7 +24,7 @@ from test_support.runtime import get_root, run_subprocess_step
 
 
 REPO_ROOT = get_root()
-FINETUNE_README = REPO_ROOT / "getting_started" / "finetune_new_embodiment.md"
+FINETUNE_README = REPO_ROOT / "docs" / "guides" / "finetune_new_embodiment.md"
 
 _TRAINING_STEPS = 2
 _CHECKPOINT = f"/tmp/so100/checkpoint-{_TRAINING_STEPS}"

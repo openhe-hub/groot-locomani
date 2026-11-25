@@ -141,7 +141,7 @@ exclude = [
     "dist",
     "logs",
     "*.ipynb",
-    "external_dependencies",
+    "third_party",
 ]
 
 [tool.ruff.format]

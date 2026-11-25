@@ -2,7 +2,7 @@
 
 GR00T N1.7 has two hardware profiles: **fine-tuning** (needs GPU VRAM and compute) and **inference/deployment** (needs low latency). This guide helps you choose the right hardware for each.
 
-![Workflow Diagram](../media/GR00T-reference-arch-diagram.png "Post-training and deployment workflow")
+![Workflow Diagram](../../media/GR00T-reference-arch-diagram.png "Post-training and deployment workflow")
 
 ---
 
@@ -34,7 +34,7 @@ The table below summarizes end-to-end inference frequency across tested platform
 - **TensorRT Full Pipeline** provides 1.5--3.3x speedup over PyTorch Eager depending on platform. Biggest gains are on datacenter GPUs where backbone acceleration is significant.
 - **torch.compile** is a good zero-effort middle ground (no engine build step), achieving 1.1--1.9x speedup across all platforms.
 
-> For full per-component latency breakdown, see the [Deployment Benchmark Results](../scripts/deployment/README.md#benchmark-results).
+> For full per-component latency breakdown, see the [Deployment Benchmark Results](../../scripts/deployment/README.md#benchmark-results).
 
 ---
 
@@ -67,7 +67,7 @@ The table below summarizes end-to-end inference frequency across tested platform
 | OS | Ubuntu 22.04+ (dGPU), JetPack 7.2 (Orin), Ubuntu 24.04 (Thor, Spark) |
 | Package manager | [uv](https://docs.astral.sh/uv/) (recommended) |
 
-Platform-specific installation instructions: see the [Deployment Guide](../scripts/deployment/README.md).
+Platform-specific installation instructions: see the [Deployment Guide](../../scripts/deployment/README.md).
 
 ---
 

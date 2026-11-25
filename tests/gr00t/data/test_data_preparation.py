@@ -15,7 +15,7 @@
 
 """
 Validate that bundled demo datasets conform to the GR00T LeRobot format
-described in getting_started/data_preparation.md.
+described in docs/guides/data_preparation.md.
 
 Checks:
   - Required directory structure (meta/, data/chunk-*, videos/chunk-*)

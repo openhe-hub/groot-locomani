@@ -4,8 +4,8 @@ set -euxo pipefail
 # Get the directory where this script is located
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 PROJECT_REPO="$SCRIPT_DIR/../../../.."
-ROBOCASA_GR1_TABLETOP_TASKS_REPO="$PROJECT_REPO/external_dependencies/robocasa-gr1-tabletop-tasks"
-ROBOCASA_GR1_TABLETOP_TASKS_PATH="external_dependencies/robocasa-gr1-tabletop-tasks"
+ROBOCASA_GR1_TABLETOP_TASKS_REPO="$PROJECT_REPO/third_party/robocasa-gr1-tabletop-tasks"
+ROBOCASA_GR1_TABLETOP_TASKS_PATH="third_party/robocasa-gr1-tabletop-tasks"
 ROBOCASA_GR1_TABLETOP_TASKS_PIN="4840e671596f93ca03651524b9f72ffb1aadfeff"
 UV_ENV="$SCRIPT_DIR/robocasa_uv"
 

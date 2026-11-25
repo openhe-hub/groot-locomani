@@ -24,7 +24,7 @@ from test_support.runtime import get_root, run_subprocess_step
 
 
 REPO_ROOT = get_root()
-DATA_CONFIG_README = REPO_ROOT / "getting_started" / "data_config.md"
+DATA_CONFIG_README = REPO_ROOT / "docs" / "guides" / "data_config.md"
 
 _IMPORTS = (
     "from gr00t.data.types import ModalityConfig, ActionConfig, ActionFormat, ActionRepresentation, ActionType\n"

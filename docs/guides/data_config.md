@@ -14,7 +14,7 @@ Each embodiment requires a Python configuration file that specifies:
 
 A modality configuration is a Python dictionary containing four top-level keys: `"video"`, `"state"`, `"action"`, and `"language"`. Each key maps to a `ModalityConfig` object.
 
-Here's the [SO-100 example](../examples/SO100/so100_config.py):
+Here's the [SO-100 example](../../examples/SO100/so100_config.py):
 
 ```python
 from gr00t.configs.data.embodiment_configs import register_modality_config

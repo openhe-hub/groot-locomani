@@ -159,7 +159,7 @@ uv run python gr00t/eval/open_loop_eval.py \
 
 The evaluation generates visualizations comparing predicted actions against ground truth trajectories:
 
-<img src="../media/open_loop_eval_so100.jpg" width="800" alt="Open loop evaluation results showing predicted vs ground truth trajectories" />
+<img src="../../media/open_loop_eval_so100.jpg" width="800" alt="Open loop evaluation results showing predicted vs ground truth trajectories" />
 
 ## Interpreting the Result: Is My Fine-tune Working?
 

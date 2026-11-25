@@ -14,6 +14,10 @@
   </p>
 </div>
 
+## Unitree G1 loco-manipulation demos
+
+The [G1 demo guide](examples/g1_loco_manipulation/README.md) covers the GR00T N1.6 box carry and N1.7 banana pick-and-place, including reproduction commands and recording locations.
+
 ## Table of Contents
 
 - [NVIDIA Isaac GR00T](#nvidia-isaac-gr00t)
@@ -82,14 +86,14 @@ The neural network architecture of GR00T N1.7 is a combination of vision-languag
 1. **Prepare data** — Collect robot demonstrations (video, state, action) and convert them to the [GR00T LeRobot format](#data-format). Demo datasets are included for quick testing.
 2. **Run inference** — Try zero-shot inference with the base model on [pretrain embodiments](#embodiment-tags), or use a [finetuned checkpoint](#checkpoints) for benchmark tasks.
 3. **Fine-tune** — Adapt the model to your robot using [`launch_finetune.py`](#fine-tuning) with your own data and modality config.
-4. **Evaluate** — Validate with [open-loop evaluation](#open-loop-evaluation), then test in [simulation benchmarks](#benchmark-examples) or on real hardware via the [Policy API](getting_started/policy.md).
+4. **Evaluate** — Validate with [open-loop evaluation](#open-loop-evaluation), then test in [simulation benchmarks](#benchmark-examples) or on real hardware via the [Policy API](docs/guides/policy.md).
 5. **Deploy** — Connect `Gr00tPolicy` to your robot controller, optionally accelerated with [TensorRT](scripts/deployment/README.md).
 
 ## What's New in GR00T N1.7
 
 GR00T N1.7 builds on N1.6 with a new VLM backbone and code-level improvements.
 
-1. **Relative EEF Action Space** — N1.7 adopts a relative end-effector action space shared across robot and human embodiments. Representing actions as deltas from the current pose (rather than absolute targets) improves generalization and is a key factor in the model's cross-embodiment performance. See [`getting_started/finetune_new_embodiment.md`](getting_started/finetune_new_embodiment.md) for guidance on configuring relative EEF for your own robot.
+1. **Relative EEF Action Space** — N1.7 adopts a relative end-effector action space shared across robot and human embodiments. Representing actions as deltas from the current pose (rather than absolute targets) improves generalization and is a key factor in the model's cross-embodiment performance. See [`docs/guides/finetune_new_embodiment.md`](docs/guides/finetune_new_embodiment.md) for guidance on configuring relative EEF for your own robot.
 
 2. **Human Video Pretraining** — N1.7 is pretrained on 20K hours of EgoScale human video data alongside diverse robot demonstrations. Because the relative EEF action representation is consistent across both human and robot data, the model can transfer manipulation priors learned from human video directly to robot control.
 
@@ -133,7 +137,7 @@ the N1.6 model package and runtime behavior.
 
 **Inference:** 1 GPU with 16 GB+ VRAM (e.g., RTX 4090, L40, H100, Jetson AGX Thor/Orin, DGX Spark).
 
-**Fine-tuning:** 1 or more GPUs with 40 GB+ VRAM recommended. We recommend H100 or L40 nodes for optimal performance. Other hardware (e.g., A6000) works but may require longer training time. See the [Hardware Recommendation Guide](getting_started/hardware_recommendation.md) for detailed specs.
+**Fine-tuning:** 1 or more GPUs with 40 GB+ VRAM recommended. We recommend H100 or L40 nodes for optimal performance. Other hardware (e.g., A6000) works but may require longer training time. See the [Hardware Recommendation Guide](docs/guides/hardware_recommendation.md) for detailed specs.
 
 **CUDA / Python per platform:** dGPU on CUDA 12.8 with Python 3.12; Jetson Thor and Orin on JetPack 7.2 / CUDA 13.2 with Python 3.12; DGX Spark on CUDA 13.0 with Python 3.12. The per-platform install scripts and Dockerfiles live under `scripts/deployment/`; see the [Deployment & Inference Guide](scripts/deployment/README.md) for the full matrix.
 
@@ -293,7 +297,7 @@ GR00T N1.7 is also available through Hugging Face LeRobot via the `groot` policy
 
 | Checkpoint | Type | Embodiment Tag | Description |
 |------------|------|---------------|-------------|
-| [`nvidia/GR00T-N1.7-3B`](https://huggingface.co/nvidia/GR00T-N1.7-3B) | Base | See [pretrain tags](getting_started/policy.md#--embodiment-tag) | Base model (3B params) — zero-shot inference on pretrain embodiments, or finetune for new tasks |
+| [`nvidia/GR00T-N1.7-3B`](https://huggingface.co/nvidia/GR00T-N1.7-3B) | Base | See [pretrain tags](docs/guides/policy.md#--embodiment-tag) | Base model (3B params) — zero-shot inference on pretrain embodiments, or finetune for new tasks |
 | [`nvidia/GR00T-N1.7-LIBERO`](https://huggingface.co/nvidia/GR00T-N1.7-LIBERO) | Finetuned | `LIBERO_PANDA` | Finetuned on [LIBERO](https://libero-project.github.io/) benchmark (Franka Panda) |
 | [`nvidia/GR00T-N1.7-DROID`](https://huggingface.co/nvidia/GR00T-N1.7-DROID) | Finetuned | `OXE_DROID_RELATIVE_EEF_RELATIVE_JOINT` | Finetuned on [DROID](https://droid-dataset.github.io/) dataset |
 | [`nvidia/GR00T-N1.7-SimplerEnv-Bridge`](https://huggingface.co/nvidia/GR00T-N1.7-SimplerEnv-Bridge) | Finetuned | `SIMPLER_ENV_WIDOWX` | Finetuned on SimplerEnv Bridge (WidowX) |
@@ -303,7 +307,7 @@ GR00T N1.7 is also available through Hugging Face LeRobot via the `groot` policy
 
 Every inference or finetuning command requires an `--embodiment-tag`. The tag determines which modality config (state/action keys, normalization) the model uses. Tags are **case-insensitive**.
 
-For the full list of pretrain and posttrain tags, see the [Policy API Guide — Embodiment Tags](getting_started/policy.md#--embodiment-tag).
+For the full list of pretrain and posttrain tags, see the [Policy API Guide — Embodiment Tags](docs/guides/policy.md#--embodiment-tag).
 
 ---
 
@@ -345,13 +349,13 @@ source .venv/bin/activate
 uv pip install -e . --verbose
 python convert_v3_to_v2.py --repo-id <DATASET_REPO_ID>
 ```
-See the full [Data Preparation Guide](getting_started/data_preparation.md) for schema details and examples.
+See the full [Data Preparation Guide](docs/guides/data_preparation.md) for schema details and examples.
 
 ---
 
 ## Inference
 
-> **Prefer an interactive walkthrough?** The [`getting_started/GR00T_inference.ipynb`](getting_started/GR00T_inference.ipynb) notebook steps through loading the model and predicting actions from observations on a sample dataset.
+> **Prefer an interactive walkthrough?** The [`docs/guides/GR00T_inference.ipynb`](docs/guides/GR00T_inference.ipynb) notebook steps through loading the model and predicting actions from observations on a sample dataset.
 
 ### Zero-Shot Inference (Base Model)
 
@@ -432,7 +436,7 @@ uv run python gr00t/eval/open_loop_eval.py \
 
 For connecting to a real robot (e.g., DROID hardware), see [examples/DROID/README.md](examples/DROID/README.md). For faster inference with TensorRT, see the [Deployment & Inference Guide](scripts/deployment/README.md).
 
-See the complete [Policy API Guide](getting_started/policy.md) for documentation on observation/action formats, batched inference, and troubleshooting.
+See the complete [Policy API Guide](docs/guides/policy.md) for documentation on observation/action formats, batched inference, and troubleshooting.
 
 ---
 
@@ -463,7 +467,7 @@ The complete collect → finetune → deploy workflow is documented in the [GR00
 
 ### Fine-tune on Your Own Robot ("NEW_EMBODIMENT")
 
-To finetune GR00T on your own robot data and configuration, follow the detailed tutorial at [`getting_started/finetune_new_embodiment.md`](getting_started/finetune_new_embodiment.md).
+To finetune GR00T on your own robot data and configuration, follow the detailed tutorial at [`docs/guides/finetune_new_embodiment.md`](docs/guides/finetune_new_embodiment.md).
 
 Ensure your input data follows the [GR00T LeRobot format](#data-format), and specify your modality configuration via `--modality-config-path`.
 
@@ -554,7 +558,7 @@ obs, reward, done, truncated, info = env.step(action)
 
 **Debugging with ReplayPolicy:** To verify your environment setup without a trained model, start the server with `--dataset-path <DATASET_PATH>` (omit `--model-path`) to replay recorded actions from the dataset.
 
-See the complete [Policy API Guide](getting_started/policy.md) for observation/action formats, batched inference, and troubleshooting.
+See the complete [Policy API Guide](docs/guides/policy.md) for observation/action formats, batched inference, and troubleshooting.
 
 ### Benchmark Examples
 

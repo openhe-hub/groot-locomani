@@ -20,7 +20,7 @@ from test_support.runtime import get_root
 
 
 REPO_ROOT = get_root()
-REAL_WORLD_README = REPO_ROOT / "getting_started" / "real_world_deployment.md"
+REAL_WORLD_README = REPO_ROOT / "docs" / "guides" / "real_world_deployment.md"
 
 
 def test_quantitative_metrics() -> None:
